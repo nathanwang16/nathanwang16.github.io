@@ -7,7 +7,7 @@
 
 <!-- background image -->
 
-![](_media/bg.png)
+![](_media/manga.png)
 
 <!-- background color -->
 
