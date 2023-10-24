@@ -1,13 +1,16 @@
 <!-- _coverpage.md -->
 
-# docsify <small>3.5</small>
+# Nathan, Xiaoyu Wang,tet
 
 
-[Get Started](#quick-start)
 
 <!-- background image -->
 
-![](_media/manga.png)
+| <img src="_media/Tibet.JPG"  /> | ![IMG_7340](_media/Brother.JPG) |
+| ------------------------------- | ------------------------------- |
+|                                 |                                 |
+
+
 
 <!-- background color -->
 
