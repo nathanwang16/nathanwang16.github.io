@@ -1,0 +1,9 @@
+# Ignore Node.js modules
+node_modules/
+
+# Ignore generated site files
+public/
+
+# Ignore sensitive or configuration files (customizable)
+db.json
+_config.*.yml
