@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Nathan's Web</title>
+  <title>Eye-Test App & Instructions - Nathan's Web</title>
   <meta name="keywords" content="Nathan">
   <meta desc name="description" content="Nathan - Xiaoyu Wang - Nathan's Web">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nathan&#39;s Web">
+<meta property="og:title" content="Eye-Test App &amp; Instructions">
 <meta property="og:url" content="https://nathanwang16.github.io/#/2023/10/21/Eye/index.html">
 <meta property="og:site_name" content="Nathan&#39;s Web">
-<meta property="og:description" content="Eye-Test App Instructions1title: Eye-Test App Instructions  Download the app">
+<meta property="og:description" content="Download the Eye-Test AppDownload the app IntroductionThe Eye-Test App is made by Xiaoyu Wang, it first started as an small personal project aims to realize basic utility of conducting the standard lo">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-21T11:51:14.101Z">
-<meta property="article:modified_time" content="2023-11-02T09:45:59.362Z">
+<meta property="article:modified_time" content="2023-11-07T07:52:53.522Z">
 <meta property="article:author" content="Xiaoyu Wang">
 <meta property="article:tag" content="Nathan">
 <meta name="twitter:card" content="summary">
@@ -1501,25 +1501,18 @@ ul.list-v >li>a:hover {
 .menu-phone li ul.list-v ul {
   right: calc(100% - 0.5 * 16px);
 }
-#wrapper {
-  max-width: 1080px;
-  margin: auto;
-}
-@media screen and (min-width: 2048px) {
-  #wrapper {
-    max-width: 55vw;
-  }
+#wrapper .m_search {
+  margin-left: auto;
+  margin-right: 16px;
 }
 #wrapper .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  margin: 0 16px 0 0;
+  order: 1;
 }
-#wrapper .menu .list-v ul {
-  left: calc(100% - 0.5 * 16px);
+#wrapper .menu li ul.list-v {
+  right: 0;
+}
+#wrapper .menu li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
 }
 .menu-phone {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -1542,26 +1535,6 @@ ul.list-v >li>a:hover {
     display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: block;
-  }
-}
-.l_header {
-  max-width: 65vw;
-  left: calc((100% - 65vw) * 0.5);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-@media screen and (max-width: 2048px) {
-  .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
-  }
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    max-width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1695,7 +1668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698982461941),
+    lastupdate: new Date(1699351071082),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2173,40 +2146,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2214,40 +2153,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2294,40 +2199,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2335,40 +2206,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2403,28 +2240,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">CONDENSARY</p>
     
     
-      <p class="subtitle">A Call Forth</p>
+      <p class="subtitle"><div id="binft"></div></p>
     
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>page</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
         
       </div>
     </div>
@@ -2462,18 +2283,86 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        Eye-Test App & Instructions
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-21T19:51:14+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Oct 21, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Eye-Test-App-Instructions"><a href="#Eye-Test-App-Instructions" class="headerlink" title="Eye-Test App Instructions"></a>Eye-Test App Instructions</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: Eye-Test App Instructions</span><br></pre></td></tr></table></figure>
+    <h4 id="Download-the-Eye-Test-App"><a href="#Download-the-Eye-Test-App" class="headerlink" title="Download the Eye-Test App"></a>Download the Eye-Test App</h4><p><a target="_blank" rel="noopener" href="https://eyesight.hncyhl.cn/">Download the app</a></p>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>The Eye-Test App is made by Xiaoyu Wang, it first started as an small personal project aims to realize basic utility of conducting the standard logarithmic visual acuity test on a phone. After using App Inventor plateform to design the app, which simply applies basic logics of if-else statement in programming and inserting Tumble -E icons made by the author himself on Photoshop, Xiaoyu realized the app could become much more. </p>
+<p>He did the following verification and adjustment, which pushed the app to the next level:</p>
+<ul>
+<li><p>Conduct controled experiment, using random assignment to compare the result of phone testing with the actual visual acuity test in hospital. Ran the hospital three times, collect about 300 eyes’ result. He then use statistical method(chi-square, r-regression…) to verify the hypothesis.</p>
+</li>
+<li><p>Adding history-keeping function</p>
+</li>
+<li><p>refined user-friendly interface</p>
+</li>
+<li><p>Psssss….The paper was accepted by <strong>The</strong> <strong>20th Congress of Chinese Association for Pediatric Ophthalmology and Strabismus (CAPOS)</strong></p>
+</li>
+<li><p>80% complete autonomous testing, with the power of deep learning(AI). The tester alone stand five meter away from the screen, and point his finger to indicate the direction of the Tumble-E sign just as usual, the computer vision(Squeeze-Net) module use the front camara to recognize the finger and thus achieves auto-testing function. </p>
+<p>Bewear that the module’s prediction accuracy is still under 0.8, which means the user experience in this module will be under expectation!</p>
+</li>
+</ul>
+<h4 id="HandBook"><a href="#HandBook" class="headerlink" title="HandBook"></a>HandBook</h4><p>&#x3D;&#x3D;The app is only for Android Users!       IOS version will be here within months.&#x3D;&#x3D;</p>
+<p>After downloading the app, some users will experience alerts reported by the android system. The Eye-Test app only uses the camera for AI module recognition function and does not violate user’s privacy. Since the app could be used offline and there are no information being uploaded online, you can safely choose …</p>
+<img src="./Eye/831699276755_.pic.jpg" class="lazyload" data-srcset="./Eye/831699276755_.pic.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="831699276755_.pic" style="zoom:25%;" />
 
-<p><a target="_blank" rel="noopener" href="https://eyesight.hncyhl.cn/">Download the app</a></p>
+<hr>
+<p>The App provides two type of test: the hands-on test and the automatic test. These tests are the standard logarithmic visual acuity tests. Test taker have to stand 5 meter away from the screen. Turn the screen on to the maximum light intensity and place the screen horizontal to the person’s eyes. </p>
+<p>The hands-on test: Another personnel must assist to press the buttons to complete the test.</p>
+<img src="./Eye/881699276760_.pic.jpg" class="lazyload" data-srcset="./Eye/881699276760_.pic.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="881699276760_.pic" style="zoom:25%;" />
+
+<p>The automatic test: The test is automatic, with the aid of AI.</p>
+<img src="./Eye/911699276762_.pic.jpg" class="lazyload" data-srcset="./Eye/911699276762_.pic.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="911699276762_.pic" style="zoom:25%;" />
+
+
+
+
+
 
   </div>
   
@@ -2498,10 +2387,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-02T17:45:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-07T15:52:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 2, 2023</p>
+    <p>更新于：Nov 7, 2023</p>
   </a>
 </div>
 
@@ -2520,7 +2409,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title= - Nathan's Web&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title=Eye-Test App & Instructions - Nathan's Web&summary="
           
           >
           
@@ -2532,7 +2421,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title= - Nathan's Web&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title=Eye-Test App & Instructions - Nathan's Web&summary="
           
           >
           
@@ -2544,7 +2433,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title= - Nathan's Web&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://nathanwang16.github.io/#/2023/10/21/Eye/&title=Eye-Test App & Instructions - Nathan's Web&summary="
           
           >
           
@@ -2578,16 +2467,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/2023/10/24/Process/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Oct 21, 2023</p>
-          <p class='content'>Process of building this website
-</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Process Of Building THIS WEB</p>
+          <p class='content'>The website’s first form can be seen in my github page project. It used Docsify, the most simple ...</p>
         </a>
       
       
         <a class='next' href='/2023/10/20/Scrambled/'>
           <p class='title'>Oct 21, 2023<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes.Life of college f...</p>
+title:My PhilosophySome bizzare thinking of …everything? my life, yes.Life of college free–what ...</p>
         </a>
       
     </div>
@@ -2645,7 +2533,7 @@ title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Download-the-Eye-Test-App"><span class="toc-text">Download the Eye-Test App</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HandBook"><span class="toc-text">HandBook</span></a></li></ol>
     </div>
   </section>
 
@@ -2701,7 +2589,7 @@ title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3041,22 +2929,24 @@ title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes
 
 
   <script>
-  let imgs = ["url(\"/_media/Tibet.JPG\")","url(\"/_media/DSC_5790.jpeg\")","url(\"/_media/IMG_5867.JPG\")","url(\"/_media/DSC_2225.jpg\")"];
+  let imgs = ["https://s2.loli.net/2023/11/03/ipBD35xVIPEU6qN.jpg","https://s2.loli.net/2023/11/03/LeSGnWzb9Xqth4D.jpg","https://s2.loli.net/2023/11/03/OfQArHM7F8tYhiu.jpg","https://s2.loli.net/2023/11/03/s3BCXKtqWxnjbr2.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
   function parallax(){
     let ParallaxWindow = document.querySelector("#parallax-window");
     
+      ParallaxWindow = document.querySelector("html");
+    
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
+    Parallax.options.fade = 1000;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '10000');
+      }, '3000');
     }
   }
 
@@ -3064,10 +2954,6 @@ title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes
     if (typeof Parallax == "undefined") {
       return
     }
-    
-      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
-        return
-      }
     
     if (imgs.length>=1) {
       Parallax.options.src = imgs[index % imgs.length];
@@ -3270,7 +3156,7 @@ title:My PhilosophyScrambledSome bizzare thinking of …everything? my life, yes
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/21/Eye/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/21/Eye/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/21/Eye/","wordCount":0,"datePublished":"2023-10-21T11:51:14.101Z","dateModified":"2023-11-02T09:45:59.362Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/21/Eye/","name":"Eye-Test App & Instructions"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Eye-Test App & Instructions","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/21/Eye/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/21/Eye/","wordCount":0,"datePublished":"2023-10-21T11:51:14.101Z","dateModified":"2023-11-07T07:52:53.522Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

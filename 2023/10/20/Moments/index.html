@@ -42,11 +42,11 @@
 <meta property="og:title" content="Greatest Moments">
 <meta property="og:url" content="https://nathanwang16.github.io/#/2023/10/20/Moments/index.html">
 <meta property="og:site_name" content="Nathan&#39;s Web">
-<meta property="og:description" content="Moments The best moment, ever. Helping these middle school student to choose a glasses style they want.   We talked about school, study, learned their language, a little. I was amazed that no matter h">
+<meta property="og:description" content="Moments  The best moment, ever. Helping these middle school student to choose a glasses style they want.   We talked about school, study, learned their language, a little. I was amazed that no matter">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-20T13:26:56.333Z">
-<meta property="article:modified_time" content="2023-11-02T13:07:30.585Z">
+<meta property="article:modified_time" content="2023-11-03T09:45:04.138Z">
 <meta property="article:author" content="Xiaoyu Wang">
 <meta property="article:tag" content="Nathan">
 <meta name="twitter:card" content="summary">
@@ -1501,25 +1501,18 @@ ul.list-v >li>a:hover {
 .menu-phone li ul.list-v ul {
   right: calc(100% - 0.5 * 16px);
 }
-#wrapper {
-  max-width: 1080px;
-  margin: auto;
-}
-@media screen and (min-width: 2048px) {
-  #wrapper {
-    max-width: 55vw;
-  }
+#wrapper .m_search {
+  margin-left: auto;
+  margin-right: 16px;
 }
 #wrapper .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  margin: 0 16px 0 0;
+  order: 1;
 }
-#wrapper .menu .list-v ul {
-  left: calc(100% - 0.5 * 16px);
+#wrapper .menu li ul.list-v {
+  right: 0;
+}
+#wrapper .menu li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
 }
 .menu-phone {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -1542,26 +1535,6 @@ ul.list-v >li>a:hover {
     display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: block;
-  }
-}
-.l_header {
-  max-width: 65vw;
-  left: calc((100% - 65vw) * 0.5);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-@media screen and (max-width: 2048px) {
-  .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
-  }
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    max-width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1695,7 +1668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698982461941),
+    lastupdate: new Date(1699351071082),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2173,40 +2146,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2214,40 +2153,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2294,40 +2199,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2335,40 +2206,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2403,28 +2240,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">CONDENSARY</p>
     
     
-      <p class="subtitle">A Call Forth</p>
+      <p class="subtitle"><div id="binft"></div></p>
     
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>page</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
         
       </div>
     </div>
@@ -2510,11 +2331,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Moments"><a href="#Moments" class="headerlink" title="Moments"></a>Moments</h1><p><img src="/Moments.assets/IMG_4979%204.jpeg" class="lazyload" data-srcset="/Moments.assets/IMG_4979%204.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_4979 4.jpeg"></p>
+    <h1 id="Moments"><a href="#Moments" class="headerlink" title="Moments"></a>Moments</h1><img src="/2023/10/20/Moments/IMG_4979.jpeg" class="lazyload" data-srcset="/2023/10/20/Moments/IMG_4979.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload">
+
 <p>The best moment, ever. Helping these middle school student to choose a glasses style they want.  </p>
 <p>We talked about school, study, learned their language, a little. I was amazed that no matter how different our culture, there is no way to stop our curious heart to know each other. The whole class ran behind me. These kids have the most innocent, natural smile and laughters. Well, I kind of know what I have to fight for now…</p>
 <p>Xigaze, Tibet. The second last day of my <strong>Aid Tibet Brightness Action Program</strong>. </p>
-<p><img src="/Moments.assets/conference.jpeg" class="lazyload" data-srcset="/Moments.assets/conference.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="conference"></p>
+<img src="/2023/10/20/Moments/conference.jpeg" class="lazyload" data-srcset="/2023/10/20/Moments/conference.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="conference">
+
 <p><strong>The</strong> <strong>20th Congress of Chinese Association for Pediatric Ophthalmology and Strabismus (CAPOS)</strong></p>
 <p>Little afraid, also surprised that my paper got accepted by this national event. </p>
 
@@ -2541,10 +2364,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-02T21:07:30+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-03T17:45:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 2, 2023</p>
+    <p>更新于：Nov 3, 2023</p>
   </a>
 </div>
 
@@ -2631,9 +2454,8 @@ Some of my Greatest Moment, when I feel mo...</p>
       
         <a class='next' href='/2023/10/20/Literate/'>
           <p class='title'>Seeking truth in literature<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Literate小酒店，夜晚，女士.pdf
-Solitude.pdf
-</p>
+          <p class='content'>It is all about comtemporary writing and poetry. 
+It is about myself, how I perceive this world. ...</p>
         </a>
       
     </div>
@@ -3087,22 +2909,24 @@ Solitude.pdf
 
 
   <script>
-  let imgs = ["url(\"/_media/Tibet.JPG\")","url(\"/_media/DSC_5790.jpeg\")","url(\"/_media/IMG_5867.JPG\")","url(\"/_media/DSC_2225.jpg\")"];
+  let imgs = ["https://s2.loli.net/2023/11/03/ipBD35xVIPEU6qN.jpg","https://s2.loli.net/2023/11/03/LeSGnWzb9Xqth4D.jpg","https://s2.loli.net/2023/11/03/OfQArHM7F8tYhiu.jpg","https://s2.loli.net/2023/11/03/s3BCXKtqWxnjbr2.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
   function parallax(){
     let ParallaxWindow = document.querySelector("#parallax-window");
     
+      ParallaxWindow = document.querySelector("html");
+    
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
+    Parallax.options.fade = 1000;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '10000');
+      }, '3000');
     }
   }
 
@@ -3110,10 +2934,6 @@ Solitude.pdf
     if (typeof Parallax == "undefined") {
       return
     }
-    
-      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
-        return
-      }
     
     if (imgs.length>=1) {
       Parallax.options.src = imgs[index % imgs.length];
@@ -3316,7 +3136,7 @@ Solitude.pdf
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/20/Moments/","name":"Greatest Moments"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Greatest Moments","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/20/Moments/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/20/Moments/","wordCount":0,"datePublished":"2023-10-20T13:26:56.333Z","dateModified":"2023-11-02T13:07:30.585Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/20/Moments/","name":"Greatest Moments"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Greatest Moments","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/20/Moments/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/20/Moments/","wordCount":0,"datePublished":"2023-10-20T13:26:56.333Z","dateModified":"2023-11-03T09:45:04.138Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

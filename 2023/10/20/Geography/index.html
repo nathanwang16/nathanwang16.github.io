@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-20T13:26:56.295Z">
-<meta property="article:modified_time" content="2023-11-02T13:34:51.111Z">
+<meta property="article:modified_time" content="2023-11-03T09:48:01.987Z">
 <meta property="article:author" content="Xiaoyu Wang">
 <meta property="article:tag" content="Nathan">
 <meta name="twitter:card" content="summary">
@@ -1501,25 +1501,18 @@ ul.list-v >li>a:hover {
 .menu-phone li ul.list-v ul {
   right: calc(100% - 0.5 * 16px);
 }
-#wrapper {
-  max-width: 1080px;
-  margin: auto;
-}
-@media screen and (min-width: 2048px) {
-  #wrapper {
-    max-width: 55vw;
-  }
+#wrapper .m_search {
+  margin-left: auto;
+  margin-right: 16px;
 }
 #wrapper .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  margin: 0 16px 0 0;
+  order: 1;
 }
-#wrapper .menu .list-v ul {
-  left: calc(100% - 0.5 * 16px);
+#wrapper .menu li ul.list-v {
+  right: 0;
+}
+#wrapper .menu li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
 }
 .menu-phone {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -1542,26 +1535,6 @@ ul.list-v >li>a:hover {
     display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: block;
-  }
-}
-.l_header {
-  max-width: 65vw;
-  left: calc((100% - 65vw) * 0.5);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-@media screen and (max-width: 2048px) {
-  .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
-  }
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    max-width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1695,7 +1668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698982461941),
+    lastupdate: new Date(1699351071082),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2173,40 +2146,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2214,40 +2153,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2294,40 +2199,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2335,40 +2206,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2403,28 +2240,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">CONDENSARY</p>
     
     
-      <p class="subtitle">A Call Forth</p>
+      <p class="subtitle"><div id="binft"></div></p>
     
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>page</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
         
       </div>
     </div>
@@ -2520,35 +2341,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <table style="width: 100%;">   <tr>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_0899.JPG" class="lazyload" data-srcset="Geography.assets/IMG_0899.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0899"></td>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_2467.JPG" class="lazyload" data-srcset="Geography.assets/IMG_2467.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_2467"></td>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_4724.JPG" class="lazyload" data-srcset="Geography.assets/IMG_4724.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_4724"></td>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_9751.JPG" class="lazyload" data-srcset="Geography.assets/IMG_9751.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_9751"></td>   </tr>   <!-- More rows with four cells each --> </table> 
 
-<p><img src="/Geography.assets/IMG_3155.JPG" class="lazyload" data-srcset="/Geography.assets/IMG_3155.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3155"></p>
+<p><img src="/IMG_3155.JPG" class="lazyload" data-srcset="/IMG_3155.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3155"></p>
 <p>Tibet: actually went there two times.</p>
 <table style="width: 100%;">   <tr>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_0655-8151359.JPG" class="lazyload" data-srcset="Geography.assets/IMG_0655-8151359.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0655" style="zoom:25%;" /></td>     <td style="width: 25%; height: 100px;">Cell 2</td>     <td style="width: 25%; height: 100px;">Cell 3</td>     <td style="width: 25%; height: 100px;">Cell 4</td>   </tr>   <!-- More rows with four cells each --> </table> 
 
 <table>
 <thead>
 <tr>
-<th><img src="/Geography.assets/IMG_6623.jpg" class="lazyload" data-srcset="/Geography.assets/IMG_6623.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_6623"></th>
-<th><img src="/Geography.assets/IMG_6774.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_6774.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_6774"></th>
-<th><img src="/Geography.assets/IMG_8066.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_8066.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_8066"></th>
+<th><img src="/IMG_6623.jpg" class="lazyload" data-srcset="/IMG_6623.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_6623"></th>
+<th><img src="/IMG_6774.jpeg" class="lazyload" data-srcset="/IMG_6774.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_6774"></th>
+<th><img src="/IMG_8066.jpeg" class="lazyload" data-srcset="/IMG_8066.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_8066"></th>
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="/Geography.assets/IMG_7720.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_7720.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_7720"></td>
-<td><img src="/Geography.assets/DSC_4732.JPG" class="lazyload" data-srcset="/Geography.assets/DSC_4732.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_4732"></td>
-<td><img src="/Geography.assets/DSC_5760.jpeg" class="lazyload" data-srcset="/Geography.assets/DSC_5760.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5760"></td>
+<td><img src="/IMG_7720.jpeg" class="lazyload" data-srcset="/IMG_7720.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_7720"></td>
+<td><img src="/DSC_4732.JPG" class="lazyload" data-srcset="/DSC_4732.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_4732"></td>
+<td><img src="/DSC_5760.jpeg" class="lazyload" data-srcset="/DSC_5760.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5760"></td>
 </tr>
 <tr>
-<td><img src="/Geography.assets/DSC_5823.JPG" class="lazyload" data-srcset="/Geography.assets/DSC_5823.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5823"></td>
-<td><img src="/Geography.assets/DSC_5795.jpeg" class="lazyload" data-srcset="/Geography.assets/DSC_5795.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5795"></td>
-<td><img src="/Geography.assets/IMG_0171.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_0171.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0171"></td>
+<td><img src="/DSC_5823.JPG" class="lazyload" data-srcset="/DSC_5823.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5823"></td>
+<td><img src="/DSC_5795.jpeg" class="lazyload" data-srcset="/DSC_5795.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="DSC_5795"></td>
+<td><img src="/IMG_0171.jpeg" class="lazyload" data-srcset="/IMG_0171.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0171"></td>
 </tr>
 <tr>
-<td><img src="/Geography.assets/IMG_3228.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_3228.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3228"></td>
-<td>![IMG_3792 3](Geography.assets&#x2F;IMG_3792 3.JPG)</td>
-<td><img src="/Geography.assets/IMG_3743.JPG" class="lazyload" data-srcset="/Geography.assets/IMG_3743.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3743"></td>
+<td><img src="/IMG_3228.jpeg" class="lazyload" data-srcset="/IMG_3228.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3228"></td>
+<td>![IMG_3792 3](&#x2F;IMG_3792 3.JPG)</td>
+<td><img src="/IMG_3743.JPG" class="lazyload" data-srcset="/IMG_3743.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_3743"></td>
 </tr>
 </tbody></table>
-<p><img src="/Geography.assets/IMG_4990.JPG" class="lazyload" data-srcset="/Geography.assets/IMG_4990.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_4990"></p>
+<p><img src="/IMG_4990.JPG" class="lazyload" data-srcset="/IMG_4990.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_4990"></p>
 <p>Jinan</p>
 <table style="width: 100%;">   <tr>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_0655-8151359.JPG" class="lazyload" data-srcset="Geography.assets/IMG_0655-8151359.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0655" style="zoom:25%;" /></td>     <td style="width: 25%; height: 100px;">Cell 2</td>     <td style="width: 25%; height: 100px;">Cell 3</td>     <td style="width: 25%; height: 100px;">Cell 4</td>   </tr>   <!-- More rows with four cells each --> </table> 
 
@@ -2558,7 +2379,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<p><img src="/Geography.assets/IMG_1371.jpeg" class="lazyload" data-srcset="/Geography.assets/IMG_1371.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_1371"></p>
+<p><img src="/IMG_1371.jpeg" class="lazyload" data-srcset="/IMG_1371.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_1371"></p>
 <table style="width: 100%;">   <tr>     <td style="width: 25%; height: 100px;"><img src="Geography.assets/IMG_0655-8151359.JPG" class="lazyload" data-srcset="Geography.assets/IMG_0655-8151359.JPG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="IMG_0655" style="zoom:25%;" /></td>     <td style="width: 25%; height: 100px;">Cell 2</td>     <td style="width: 25%; height: 100px;">Cell 3</td>     <td style="width: 25%; height: 100px;">Cell 4</td>   </tr>   <!-- More rows with four cells each --> </table> 
 
   </div>
@@ -2584,10 +2405,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-02T21:34:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-03T17:48:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Nov 2, 2023</p>
+    <p>更新于：Nov 3, 2023</p>
   </a>
 </div>
 
@@ -2663,19 +2484,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/10/20/Adventure/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hobby is Adventure</p>
-          <p class='content'>Adventure123---title: Adventure---
-
-If you are looking for the traditional adventure like travell...</p>
-        </a>
-      
-      
-        <a class='next' href='/2023/10/20/Family/'>
-          <p class='title'>Family & Friends that warms me, and propels me<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2023/10/20/Family/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Family & Friends that warms me, and propels me</p>
           <p class='content'>Family
 My lovely family not only include a few close relative but involves families that my paren...</p>
         </a>
+      
       
     </div>
   
@@ -3128,22 +2942,24 @@ My lovely family not only include a few close relative but involves families tha
 
 
   <script>
-  let imgs = ["url(\"/_media/Tibet.JPG\")","url(\"/_media/DSC_5790.jpeg\")","url(\"/_media/IMG_5867.JPG\")","url(\"/_media/DSC_2225.jpg\")"];
+  let imgs = ["https://s2.loli.net/2023/11/03/ipBD35xVIPEU6qN.jpg","https://s2.loli.net/2023/11/03/LeSGnWzb9Xqth4D.jpg","https://s2.loli.net/2023/11/03/OfQArHM7F8tYhiu.jpg","https://s2.loli.net/2023/11/03/s3BCXKtqWxnjbr2.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
   function parallax(){
     let ParallaxWindow = document.querySelector("#parallax-window");
     
+      ParallaxWindow = document.querySelector("html");
+    
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
+    Parallax.options.fade = 1000;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '10000');
+      }, '3000');
     }
   }
 
@@ -3151,10 +2967,6 @@ My lovely family not only include a few close relative but involves families tha
     if (typeof Parallax == "undefined") {
       return
     }
-    
-      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
-        return
-      }
     
     if (imgs.length>=1) {
       Parallax.options.src = imgs[index % imgs.length];
@@ -3357,7 +3169,7 @@ My lovely family not only include a few close relative but involves families tha
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/20/Geography/","name":"The places I have lived in, those special location to bunk"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"The places I have lived in, those special location to bunk","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/20/Geography/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/20/Geography/","wordCount":0,"datePublished":"2023-10-20T13:26:56.295Z","dateModified":"2023-11-02T13:34:51.111Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","sameAs":["https://github.com/volantis-x"],"description":"Nathan"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nathanwang16.github.io/#/","name":"Nathan's Web"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nathanwang16.github.io/#/2023/10/20/Geography/","name":"The places I have lived in, those special location to bunk"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","keywords":"Nathan","description":"Nathan","author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/","description":"Nathan"},"publisher":{"@type":"Organization","name":"Nathan's Web","url":"https://nathanwang16.github.io/#/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nathanwang16.github.io/#?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"The places I have lived in, those special location to bunk","description":"Nathan","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://nathanwang16.github.io/#/2023/10/20/Geography/"},"author":{"@type":"Person","name":"Xiaoyu Wang","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nathanwang16.github.io/#/"},"publisher":{"@type":"Organization","name":"Nathan's Web","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nathanwang16.github.io/#/2023/10/20/Geography/","wordCount":0,"datePublished":"2023-10-20T13:26:56.295Z","dateModified":"2023-11-03T09:48:01.987Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

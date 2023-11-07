@@ -1501,25 +1501,18 @@ ul.list-v >li>a:hover {
 .menu-phone li ul.list-v ul {
   right: calc(100% - 0.5 * 16px);
 }
-#wrapper {
-  max-width: 1080px;
-  margin: auto;
-}
-@media screen and (min-width: 2048px) {
-  #wrapper {
-    max-width: 55vw;
-  }
+#wrapper .m_search {
+  margin-left: auto;
+  margin-right: 16px;
 }
 #wrapper .menu {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 1;
-  -ms-flex: 1 1;
-  flex: 1 1;
-  margin: 0 16px 0 0;
+  order: 1;
 }
-#wrapper .menu .list-v ul {
-  left: calc(100% - 0.5 * 16px);
+#wrapper .menu li ul.list-v {
+  right: 0;
+}
+#wrapper .menu li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
 }
 .menu-phone {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -1542,26 +1535,6 @@ ul.list-v >li>a:hover {
     display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: block;
-  }
-}
-.l_header {
-  max-width: 65vw;
-  left: calc((100% - 65vw) * 0.5);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-@media screen and (max-width: 2048px) {
-  .l_header {
-    max-width: 1112px;
-    left: calc((100% - 1112px) * 0.5);
-  }
-}
-@media screen and (max-width: 1112px) {
-  .l_header {
-    left: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    max-width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1695,7 +1668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1698982461941),
+    lastupdate: new Date(1699351071082),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2173,40 +2146,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2214,40 +2153,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2294,40 +2199,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/archives/" title="归档"
                   
                   
@@ -2335,40 +2206,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     active-action="action-archives"
                   >
                   <i class='fa-solid fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2403,28 +2240,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="title">CONDENSARY</p>
     
     
-      <p class="subtitle">A Call Forth</p>
+      <p class="subtitle"><div id="binft"></div></p>
     
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>page</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
         
       </div>
     </div>
@@ -2593,7 +2414,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
         <a class='prev' href='/2023/10/20/Study/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Quest of Study</p>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Quest → Study</p>
           <p class='content'>StudyThere are three stage of my own ‘school’, or what you call learning, research, academics…
 
 G...</p>
@@ -2603,7 +2424,8 @@ G...</p>
         <a class='next' href='/2023/10/20/Moments/'>
           <p class='title'>Greatest Moments<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>Moments
-The best moment, ever. Helping these middle school student to choose a glasses style they...</p>
+
+The best moment, ever. Helping these middle school student to choose a glasses style the...</p>
         </a>
       
     </div>
@@ -3057,22 +2879,24 @@ The best moment, ever. Helping these middle school student to choose a glasses s
 
 
   <script>
-  let imgs = ["url(\"/_media/Tibet.JPG\")","url(\"/_media/DSC_5790.jpeg\")","url(\"/_media/IMG_5867.JPG\")","url(\"/_media/DSC_2225.jpg\")"];
+  let imgs = ["https://s2.loli.net/2023/11/03/ipBD35xVIPEU6qN.jpg","https://s2.loli.net/2023/11/03/LeSGnWzb9Xqth4D.jpg","https://s2.loli.net/2023/11/03/OfQArHM7F8tYhiu.jpg","https://s2.loli.net/2023/11/03/s3BCXKtqWxnjbr2.jpg"];
   let index = 0;
   let IntervalParallax = null;
 
   function parallax(){
     let ParallaxWindow = document.querySelector("#parallax-window");
     
+      ParallaxWindow = document.querySelector("html");
+    
     Parallax.window = ParallaxWindow;
-    Parallax.options.fade = 1500;
+    Parallax.options.fade = 1000;
     Parallax.cache = 1;
     next_parallax();
     Parallax.init();
     if (imgs.length>1) {
       IntervalParallax = setInterval(function () {
         next_parallax();
-      }, '10000');
+      }, '3000');
     }
   }
 
@@ -3080,10 +2904,6 @@ The best moment, ever. Helping these middle school student to choose a glasses s
     if (typeof Parallax == "undefined") {
       return
     }
-    
-      if (!document.querySelector("#full")&&!document.querySelector("#half")) {
-        return
-      }
     
     if (imgs.length>=1) {
       Parallax.options.src = imgs[index % imgs.length];
