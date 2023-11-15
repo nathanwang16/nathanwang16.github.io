@@ -50,10 +50,10 @@ var binft = function (r) {
         ].map(function (r) {
     return r + ""
     }),
-    showTotalWordDelayTime = 2,
+    showTotalWordDelayTime = 15,
     refreshDelayTime = 1,
     maxLength = 1,
-    d = 75,
+    d = 30,
     c = {
         text: "",
         prefixP: -maxLength,
