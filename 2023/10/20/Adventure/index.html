@@ -1666,9 +1666,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: "env",
-    cdn: {"js":{"app":"/js/app.7a2c825e.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js?time=1700637893468","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js?time=1700637893468","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js?time=1700637893468","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js?time=1700637893468","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js?time=1700637893468","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js?time=1700637893468","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js?time=1700637893468"},"css":{"style":"/css/style.34ef3f6f.css"}},
+    cdn: {"js":{"app":"/js/app.7a2c825e.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js?time=1700656703792","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js?time=1700656703792","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js?time=1700656703792","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js?time=1700656703792","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js?time=1700656703792","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js?time=1700656703792","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js?time=1700656703792"},"css":{"style":"/css/style.34ef3f6f.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700637893468),
+    lastupdate: new Date(1700656703792),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2146,13 +2146,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/docs/" title="artworks"
+                href="/docs/" title="Poetry"
                   
                   
                   
                     active-action="action-docs"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>artworks
+                  <i class='fa-solid fa-folder-open fa-fw'></i>Poetry
                 </a>
                 
               </li>
@@ -2216,13 +2216,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/docs/" title="artworks"
+                href="/docs/" title="Poetry"
                   
                   
                   
                     active-action="action-docs"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>artworks
+                  <i class='fa-solid fa-folder-open fa-fw'></i>Poetry
                 </a>
                 
               </li>
@@ -2722,19 +2722,19 @@ It is about myself, how I perceive this world. ...</p>
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js?time=1700637893468")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js?time=1700656703792")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js?time=1700637893468")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js?time=1700656703792")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js?time=1700637893468")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js?time=1700656703792")
       }
     
   };
@@ -2861,7 +2861,7 @@ It is about myself, how I perceive this world. ...</p>
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js?time=1700637893468");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js?time=1700656703792");
   }
 
   function loadSearchService() {
@@ -2977,7 +2977,7 @@ It is about myself, how I perceive this world. ...</p>
   var runningOnBrowser = typeof window !== "undefined";
   var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
   if (!isBot) {
-    volantis.js('https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js?time=1700637893468').then(()=>{
+    volantis.js('https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js?time=1700656703792').then(()=>{
       parallax()
     })
     volantis.pjax.send(()=>{
