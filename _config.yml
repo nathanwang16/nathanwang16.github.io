@@ -1,0 +1,13 @@
+title: "Nathan Wang"
+description: "Concise"
+theme: jekyll-theme-minimal
+
+# Plugins
+plugins:
+  - jekyll-feed  # This plugin automatically generates your RSS feed
+
+# Exclude any files/folders you don't want processed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
