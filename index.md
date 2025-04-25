@@ -1,8 +1,7 @@
-# Nathan Wang
 
 ---
 
-![guitar.JPG](/Users/xiaoyuwang/nathanwang.github.io/guitar.JPG)
+![guitar.jpg](guitar.JPG)
 
 I don't know why I would choose some anime wallpaper as the theme for it, I really don't know...
 
