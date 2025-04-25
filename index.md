@@ -24,4 +24,12 @@ Anthro, or archeology, has many innovative methods that is fundamental to study 
 
 
 
+The crisis of self-identification let people learn
+I am in one of those crisis right now
+
+Inavoidable in human nature, perhaps the chill days are the best days, and the most brillant.
+
+
+
+
 
