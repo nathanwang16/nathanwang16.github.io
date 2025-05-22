@@ -1,0 +1,45 @@
+name: Update index.md
+
+on:
+  push:
+    paths:
+      - '**.md'
+      - '!index.md'
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Generate index.md
+        run: |
+          python3 <<EOF
+          import os
+
+          index_file = "index.md"
+          ignore_files = {index_file, "README.md"}
+
+          md_files = sorted(f for f in os.listdir('.') if f.endswith('.md') and f not in ignore_files)
+
+          with open(index_file, "w") as f:
+              f.write("# 📝 My Blog\\n\\n")
+              f.write("Welcome to my blog. Select a post below:\\n\\n")
+              for file in md_files:
+                  title = file.replace(".md", "").replace("-", " ").title()
+                  f.write(f"- [{title}]({file})\\n")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add index.md
+          git commit -m "Auto-update index.md" || echo "No changes"
+          git push
