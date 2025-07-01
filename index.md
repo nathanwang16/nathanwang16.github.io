@@ -38,11 +38,11 @@ The journey is already worthwhile before I step my feet on the Thailand. The har
 
 Now I am in Moo Baan Dek, kanchanaburi, thailand. Lovely kids, astounding school. beloved teachers, family.
 
-
+----------------------
 The research field in mech corp give me a feeling of indecisiveness. Anthropic transformer threads and the LessWrong are two great places to get started. A few older papers comes from Distill. There is too much blogs to see, very busy. 
 
 Today I cleaned up a wasted room at the corner of the village, and moved in some old but excellent quality music instruments in. Journey just began. 
 
-
+------
 Plan to focus on a few field during the summer: Computational complexity, topology, and computational neuroscience.
 
