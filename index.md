@@ -44,3 +44,4 @@ The research field in mech corp give me a feeling of indecisiveness. Anthropic t
 Today I cleaned up a wasted room at the corner of the village, and moved in some old but excellent quality music instruments in. Journey just began. 
 
 Plan to focus on a few field during the summer: Computational complexity, topology, and computational neuroscience.
+
