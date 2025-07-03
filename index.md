@@ -50,4 +50,10 @@ The script is finally working!
 
 -------
 Teaching record:
-First week was watching movie: Dora the explore, the big red dog, and then combined with a lot of writing on the whiteboard. While
+First week was watching movie: Dora the explore, the big red dog, and then combined with a lot of writing on the whiteboard. Writing on the white board can be very fun and engaging. Tell the kids to come up and draw pictures plus the English words, and followed by pasaThai.
+There isn’t a topic for us.
+Second week was pretty much the same.
+Third week I printed out some worksheet about body parts, and then did Simon says, and some songs and dancing. 
+I feel like music/culture would be a great topic. 
+I also made use of many music instruments, drums and harps as they are easy to play. The class is very engaging!
+
