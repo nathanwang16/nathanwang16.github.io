@@ -60,4 +60,23 @@ I also made use of many music instruments, drums and harps as they are easy to p
 
 
 
+---
+Moo Baan Dek School Management notes and first draft:
 
+The school don’t have any curriculum for common subjects. Each teacher decides on what to teach and design worksheets on a class-to-class basis.
+
+There is no group chat for teachers. Sometimes teachers don’t know the schedule of the school or the events example: one teacher took some kids to see the doctor.
+
+Children rarely read books. 
+
+Kids likes tictok
+
+---
+
+
+
+---
+世界宜居指南：
+
+
+---
