@@ -58,6 +58,7 @@ I feel like music/culture would be a great topic.
 It’s important to note that we are not here to be an ambassador of a very specific culture that we thought would be ahead of everyone else. We are here to promote knowledge and equality of cultures internationally. Thus it’s important for the children to respect their own culture, and then understand other cultures around the world, including Asia, pacific, Eastern, western…
 I also made use of many music instruments, drums and harps as they are easy to play. The class is very engaging!
 
+Con inked 
 
 
 ---
