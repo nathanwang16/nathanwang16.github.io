@@ -75,7 +75,7 @@ Kids likes tictok
 ---
 7/14
 向伟大的人学习
-
+He was the son of Mel Awl. He looks like Gandi, with the glasses on. 
 燃烧生命
 
 平静的在温凉的夜晚燃烧，稍微喝一点酒，享受夜晚，长大的权力
