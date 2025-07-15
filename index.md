@@ -75,7 +75,8 @@ Kids likes tictok
 ---
 7/14
 向伟大的人学习
-He was the son of Mel Awl. He looks like Gandi, with the glasses on. He showed me the piles of documents about education for children with special need. All the note takings. 
+He was the son of Mel Awl. He looks like Gandi, with the glasses on. He showed me the piles of documents about education for children with special need. All the note takings. He truly run the school.
+He sits at outside with his computer under the tree. He said he has to work outside even when it’s so hot
 燃烧生命
 
 平静的在温凉的夜晚燃烧，稍微喝一点酒，享受夜晚，长大的权力
