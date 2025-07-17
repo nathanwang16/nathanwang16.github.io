@@ -90,3 +90,4 @@ He sits at outside with his computer under the tree. He said he has to work outs
 
 
 ---
+知识量统计使用KC，以及结构复杂度来计算。数学以及计算机科学，人工智能最高。文科最高的是法学。
