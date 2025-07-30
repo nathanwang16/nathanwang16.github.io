@@ -35,7 +35,6 @@ Plan to focus on a few field during the summer: Computational complexity, topolo
 The script is finally working!
 
 ---
-
 Teaching record:
 First week was watching movie: Dora the explore, the big red dog, and then combined with a lot of writing on the whiteboard. Writing on the white board can be very fun and engaging. Tell the kids to come up and draw pictures plus the English words, and followed by pasaThai.
 There isn’t a topic for us.
@@ -44,9 +43,7 @@ Third week I printed out some worksheet about body parts, and then did Simon say
 I feel like music/culture would be a great topic.
 It’s important to note that we are not here to be an ambassador of a very specific culture that we thought would be ahead of everyone else. We are here to promote knowledge and equality of cultures internationally. Thus it’s important for the children to respect their own culture, and then understand other cultures around the world, including Asia, pacific, Eastern, western…
 I also made use of many music instruments, drums and harps as they are easy to play. The class is very engaging!
-
-Con inked 
-
+ 
 ---
 
 Moo Baan Dek School Management notes and first draft:
@@ -86,3 +83,20 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 ---
 
 知识量统计使用KC，以及结构复杂度来计算。数学以及计算机科学，人工智能最高。文科最高的是法学。
+
+结构复杂度迁移至化学，生物构成。同时比较结构复杂度：历史路径循环，以及稀有程度：数数量，来推断是否有自然/人工选择发生。这个选择，是否也能包括智慧体对于生活中每一个细节的选择？
+选择必定意味着现象的涌现。本质上是因果逻辑推断。但是选择是否意味着意识的产生？也就是说这个理论应用于神经学有意义吗？
+那迁移到语言学呢？
+
+---
+
+回归纯朴的哲学。Which is the philosophy to-the-earth?
+
+人之间的交通单纯
+
+愿全人幸福，或者至少安稳的度过大部分时光。我们的物质需求少，精神需求多。
+
+但那些大多数人，却没有被那些少数人记住。那些少数人在经历人生的“意义危机”，而那些多数人不应该变成那臆想当中的对比角色。曾不去关心，不去在意，冷漠又温柔。但那只是说明我本身是个无聊冷漠的人。要做出改变。
+《路边的藤井》
+
+
