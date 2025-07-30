@@ -59,6 +59,9 @@ introductions on operations of Roblox as a company
 	models of profits and advertisement for
 
 Fourth class: Nash Equilibrium and Group Theory in Math
+Nash Equilibrium for the importance of team work. Recognizing the similarities/differences in tic-tac-toe; Chess; prisoner’s dilemma; and then rock-paper-scissors.
+Group Theory in Math for a abstract way to understand patterns and symmetries.
+
 
 
 
