@@ -43,7 +43,25 @@ Third week I printed out some worksheet about body parts, and then did Simon say
 I feel like music/culture would be a great topic.
 It’s important to note that we are not here to be an ambassador of a very specific culture that we thought would be ahead of everyone else. We are here to promote knowledge and equality of cultures internationally. Thus it’s important for the children to respect their own culture, and then understand other cultures around the world, including Asia, pacific, Eastern, western…
 I also made use of many music instruments, drums and harps as they are easy to play. The class is very engaging!
- 
+
+Fourth week: Middle school lessons:
+First class: Making 3-fold name tags with names in the middle columns and favorite Animal, movie, music, food in the other columns. Then present basic self-introduction using the name tags.
+https://bogglesworldesl.com/lessons/Nov2001.html : that teaches ability to ask questions in English about words and sentences they don't understand.
+English worksheets provided by teacher
+
+Second + Third class: Roblox game development with AI 
+
+familiar with the game development interface
+	AI included. Students learns quickly. Ask them now they will still remember how to
+use it. Mostly case-by-case demonstrations
+
+introductions on operations of Roblox as a company 
+	models of profits and advertisement for
+
+Fourth class: Nash Equilibrium and Group Theory in Math
+
+
+
 ---
 
 Moo Baan Dek School Management notes and first draft:
