@@ -62,7 +62,9 @@ Fourth class: Nash Equilibrium and Group Theory in Math
 Nash Equilibrium for the importance of team work. Recognizing the similarities/differences in tic-tac-toe; Chess; prisoner’s dilemma; and then rock-paper-scissors.
 Group Theory in Math for a abstract way to understand patterns and symmetries.
 
-Fifth class: 
+Fifth class: Continuing Group Theory. Watching 3-blue-1-brown Youtube math video. Pal showed high interests.
+
+Sixth class: Farewell. Teaching kids to write emails to me. Ben failed to register a google account.
 
 
 
