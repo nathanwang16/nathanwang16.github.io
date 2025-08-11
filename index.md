@@ -35,6 +35,7 @@ Plan to focus on a few field during the summer: Computational complexity, topolo
 The script is finally working!
 
 ---
+
 Teaching record:
 First week was watching movie: Dora the explore, the big red dog, and then combined with a lot of writing on the whiteboard. Writing on the white board can be very fun and engaging. Tell the kids to come up and draw pictures plus the English words, and followed by pasaThai.
 There isn’t a topic for us.
@@ -52,11 +53,11 @@ English worksheets provided by teacher
 Second + Third class: Roblox game development with AI 
 
 familiar with the game development interface
-	AI included. Students learns quickly. Ask them now they will still remember how to
+    AI included. Students learns quickly. Ask them now they will still remember how to
 use it. Mostly case-by-case demonstrations
 
 introductions on operations of Roblox as a company 
-	models of profits and advertisement for
+    models of profits and advertisement for
 
 Fourth class: Nash Equilibrium and Group Theory in Math
 Nash Equilibrium for the importance of team work. Recognizing the similarities/differences in tic-tac-toe; Chess; prisoner’s dilemma; and then rock-paper-scissors.
@@ -65,9 +66,6 @@ Group Theory in Math for a abstract way to understand patterns and symmetries.
 Fifth class: Continuing Group Theory. Watching 3-blue-1-brown Youtube math video. Pal showed high interests.
 
 Sixth class: Farewell. Teaching kids to write emails to me. Ben failed to register a google account.
-
-
-
 
 ---
 
@@ -123,5 +121,3 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 但那些大多数人，却没有被那些少数人记住。那些少数人在经历人生的“意义危机”，而那些多数人不应该变成那臆想当中的对比角色。曾不去关心，不去在意，冷漠又温柔。但那只是说明我本身是个无聊冷漠的人。要做出改变。
 《路边的藤井》
-
-
