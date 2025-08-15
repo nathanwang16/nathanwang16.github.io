@@ -121,3 +121,90 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 但那些大多数人，却没有被那些少数人记住。那些少数人在经历人生的“意义危机”，而那些多数人不应该变成那臆想当中的对比角色。曾不去关心，不去在意，冷漠又温柔。但那只是说明我本身是个无聊冷漠的人。要做出改变。
 《路边的藤井》
+
+
+---
+
+Take a look at our midway, around Day 3~4, project structure.
+
+  .
+  ├── app/
+  │   ├── backend/
+  │   │   ├── api-gateway/
+  │   │   ├── services/
+  │   │   │   ├── user-svc/
+  │   │   │   └── collaboration-service/
+  │   │   ├── cache/
+  │   │   ├── db/
+  │   │   └── logs/
+  │   └── frontend/
+  │       ├── src/
+  │       │   ├── app/
+  │       │   │   ├── dashboard/
+  │       │   │   ├── login/
+  │       │   │   ├── preview/
+  │       │   │   ├── reader-download/
+  │       │   │   ├── reader-translating/
+  │       │   │   ├── reader-workspace/
+  │       │   │   ├── translate/
+  │       │   │   ├── translate-editor/
+  │       │   │   ├── translating/
+  │       │   │   ├── user-type/
+  │       │   │   └── workspace/
+  │       │   ├── components/
+  │       │   │   └── ui/
+  │       │   ├── context/
+  │       │   ├── hooks/
+  │       │   ├── lib/
+  │       │   └── styles/
+  │       ├── public/
+  │       └── .next/
+  ├── backend/
+  │   ├── api/
+  │   ├── architecture/
+  │   ├── schemas/
+  │   └── services/
+  ├── config/
+  ├── database/
+  ├── docs/
+  ├── Documentations/
+  ├── frontend/
+  │   ├── api-gateway/
+  │   ├── translate-editor/
+  │   └── user-guides/
+  ├── infrastructure/
+  ├── logs/
+  ├── nextjs-app/
+  ├── scripts/
+  ├── services/
+  │   └── user-service/
+  ├── Test/
+  │   └── data/
+  └── tools/
+      ├── experiments/
+      │   └── PDF_to_DOCX/
+      └── scripts/
+          └── legacy/
+
+  The project appears to be a web application with:
+  - Frontend: Next.js app with various pages (dashboard, login, reader,
+  translator, workspace)
+  - Backend: Microservices architecture with API gateway, user service,
+  collaboration service
+  - Database & Cache: Database configurations and Redis cache
+  - Documentation: Various documentation files
+  - Tools: PDF to DOCX converter and other utilities
+
+
+
+
+
+
+
+
+
+
+
+
+
+
