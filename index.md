@@ -125,6 +125,18 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 ---
 
+
+
+
+
+
+
+
+
+---
+
+
+
 Take a look at our midway, around Day 3~4, project structure.
 
   .
@@ -188,12 +200,15 @@ Take a look at our midway, around Day 3~4, project structure.
 
   The project appears to be a web application with:
   - Frontend: Next.js app with various pages (dashboard, login, reader,
-  translator, workspace)
+    translator, workspace)
   - Backend: Microservices architecture with API gateway, user service,
-  collaboration service
+    collaboration service
   - Database & Cache: Database configurations and Redis cache
   - Documentation: Various documentation files
   - Tools: PDF to DOCX converter and other utilities
+
+
+
 
 
 
