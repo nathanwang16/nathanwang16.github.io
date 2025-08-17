@@ -125,7 +125,7 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 ---
 
-
+我的好友，孙，提议我记录，整理下来Moo Baan Dek 的这次经历，写成一个
 
 
 
