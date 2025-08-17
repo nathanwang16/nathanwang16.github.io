@@ -127,7 +127,49 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 我的好友，孙，提议我记录，整理下来Moo Baan Dek 的这次经历，写成一个比较客观全面的report. 很好的想法。
 
+How does a school functions mainly on donations?
 
+Psychology of kids: short term volunteers
+
+the economical structure of thailand
+
+religion
+
+language
+
+race
+
+politics
+
+education v.s. politics and culture
+
+advertisement
+
+
+
+泰国的乡村以及城市
+
+贫富差距
+
+贫穷
+
+家庭关系
+
+如何消除自己的无力感？
+
+如何打破人的惰性？
+
+
+
+what’s my role, as a volunteer spreading English knowledge, in a thai country?
+
+
+
+why is there little volunteers and donations?
+
+
+
+How independent, is Moo Baan Dek?
 
 
 
