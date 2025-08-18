@@ -253,9 +253,19 @@ Take a look at our midway, around Day 3~4, project structure.
 
 
 
+---
+
+### Semi-automated trading
 
 
 
+algorithms
+
+software
+
+
+
+backtesting
 
 
 
