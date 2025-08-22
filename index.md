@@ -127,6 +127,8 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 我的好友，孙，提议我记录，整理下来Moo Baan Dek 的这次经历，写成一个比较客观全面的report. 很好的想法。
 
+
+
 How does a school functions mainly on donations?
 
 Psychology of kids: short term volunteers
