@@ -127,6 +127,20 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 我的好友，孙，提议我记录，整理下来Moo Baan Dek 的这次经历，写成一个比较客观全面的report. 很好的想法。
 
+The first step is to list out the main topics, and then subtopic keywords.
+
+Then bold the keywords that deserve a new story on its own, and start grouping. Try to reduce those to less than 6
+
+reorder the hiearchy
+
+fill-in details
+
+linkage in between stories
+
+all in the meanwhile: forming a coherent, reasonable knowledge structure and worldview
+
+
+
 
 
 How does a school functions mainly on donations?
