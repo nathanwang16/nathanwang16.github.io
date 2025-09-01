@@ -1,5 +1,9 @@
 I don't know why I would choose some anime wallpaper as the theme for it, I really don't know...
 
+---
+
+有时候想要写作以及
+
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
 
 You are welcome to join me really. Email: nathan16@g.ucla.edu
