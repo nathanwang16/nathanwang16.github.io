@@ -2,7 +2,7 @@ I don't know why I would choose some anime wallpaper as the theme for it, I real
 
 ---
 
-有时候想要写作的情感欲喷而出
+有时候想要写作的情感浴噴而出
 
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
 
