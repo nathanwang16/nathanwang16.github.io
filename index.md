@@ -6,6 +6,10 @@ I don't know why I would choose some anime wallpaper as the theme for it, I real
 
 ---
 
+你看，这次我就忘记了。
+
+---
+
 
 
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
