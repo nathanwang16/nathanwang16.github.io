@@ -10,7 +10,7 @@ I don't know why I would choose some anime wallpaper as the theme for it, I real
 
 ---
 
-Last night at the most frightening moment, I dreamt of Moo Baan Dek, and all the children. I hugged them all, crying. I called their name, and asked where Mo is. I cannot understate the profound influence of Moo Baan Dek to me. It is one complete satisfaction ever since my broken childhood. I was healed, and feeling warm. I stopped crying. 
+Last night at the most frightening moment worring about my mom, I dreamt of Moo Baan Dek, and all the children. I hugged them all, crying. I called their name, and asked where Mo is. I cannot understate the profound influence of Moo Baan Dek to me. It is one complete satisfaction ever since my broken childhood. I was healed, and feeling warm. I stopped crying. 
 
 Thank you, MBD.
 
