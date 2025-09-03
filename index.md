@@ -20,7 +20,7 @@ Thank you, MBD.
 
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
 
-You are welcome to join me really. Email: nathan16@g.ucla.edu
+You are welcome to join me. Email: nathan16@g.ucla.edu
 
 Bruin's philosophy club is fun
 
