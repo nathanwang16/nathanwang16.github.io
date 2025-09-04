@@ -149,7 +149,7 @@ He sits outside with his computer, under the tree. He said he has to work outsid
 
 ---
 
-有人从书中获取知识，我从网站上学习，
+有人从书中获取知识，我从网站上学习。前者是一个漫长的提炼过程，
 
 我的好友，孙，提议我记录，整理下来Moo Baan Dek 的这次经历，写成一个比较客观全面的report. 很好的想法。
 
