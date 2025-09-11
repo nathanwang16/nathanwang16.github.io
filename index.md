@@ -229,7 +229,9 @@ memory-semi conductors: 忆阻器。Using this memrister, you are able to do for
 
 Qinghua best in this, using it as neurolinks for brains.
 
-I also met a person who solely support his family by investing in stocks. Poor coordination, poor dress, yet sitting comfortably, and has passion  
+I also met a person who solely support his family by investing in stocks. Poor coordination, poor dress, yet sitting comfortably, and has passion when he talks about stocks. Old yellow desktop on a large desk, nothing else in that large living room. Not much furnatures, european styles. And lots of books.
+
+Dealing with digits. Intellectual but meaning diminishing. courageous. I have some idea how my thing might work. Still using traditional ways to trade, late for updates on world tech.  
 
 
 
