@@ -225,6 +225,8 @@ Sep 7 ～ 11：
 
 new things, learning happens every day. 
 
+memory-semi conductors: 忆阻器。Using this 
+
 
 
 ---
