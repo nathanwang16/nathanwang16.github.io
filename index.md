@@ -225,7 +225,11 @@ Sep 7 ～ 11：
 
 new things, learning happens every day. 
 
-memory-semi conductors: 忆阻器。Using this memrister 
+memory-semi conductors: 忆阻器。Using this memrister, you are able to do forward propogations really fast, but can't do derivation/back propogation? ... weird
+
+Qinghua best in this, using it as neurolinks for brains.
+
+I also met a person who solely support his family by investing in stocks. Poor coordination, poor dress, yet sitting comfortably, and has passion  
 
 
 
