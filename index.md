@@ -219,7 +219,11 @@ How independent, is Moo Baan Dek?
 
 
 
+---
 
+Sep 7 ～ 11：
+
+new things, learning happens every day. 
 
 
 
