@@ -241,7 +241,13 @@ It's not as good as you think, being a pro trader. Sailing in a sea of unknown f
 
 ---
 
-Sep 15: the biggest day of investment and startup and real 
+Sep 15: the biggest day of investment and startup and biotech giants
+
+company XXXXXX is founded upon the best bio tech of this world, from SD. crispre came, then transfer this into protein, found that it might work, then tried for almost 10 years, RD. without any products. recently finally done, but still haven't profited yet.
+
+Profit, can wait. But idea, the pipeline, has to be thought out carefully.
+
+
 
 ---
 
