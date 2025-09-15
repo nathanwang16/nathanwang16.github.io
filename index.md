@@ -247,7 +247,15 @@ company XXXXXX is founded upon the best bio tech of this world, from SD. crispre
 
 Profit, can wait. But idea, the pipeline, has to be thought out carefully.
 
-biotech stuff.
+biotech stuff: 
+
+1. The problem of predicting/identifying/classifying the DNA sequence that will produce the same protein, but with very different speed / volumn, isn't solved, not even close. There is not enough data. Expensive. Should be algorithmic-dependent, not data dependent.
+2. The predictions using co-variance of two sites, by acknowledging their high-than-usual coordinates or spacing relationships, accross species with proteins of the same function, is widely applied for alphafold predictions
+3. 
+
+alphafold didn't solve the entire omic problem. Only the main chain is predicted, side chain can take many forms, still no conclusions.
+
+
 
 ---
 
