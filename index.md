@@ -247,7 +247,7 @@ company XXXXXX is founded upon the best bio tech of this world, from SD. crispre
 
 Profit, can wait. But idea, the pipeline, has to be thought out carefully.
 
-
+biotech stuff.
 
 ---
 
