@@ -241,7 +241,7 @@ It's not as good as you think, being a pro trader. Sailing in a sea of unknown f
 
 ---
 
-Sep 15:
+Sep 15: the biggest day of investment and startup and real 
 
 ---
 
