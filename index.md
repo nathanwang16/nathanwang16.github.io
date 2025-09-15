@@ -255,7 +255,7 @@ biotech stuff:
 
 3. Biotech, or comp bio, could perhaps, be analysed or viewed as the extension of some more general science principles... Categories are the same, morphisms exists accross fields.
 
-4. 
+4. data driven, and AI for science.
 
    
 
