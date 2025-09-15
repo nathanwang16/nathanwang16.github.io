@@ -241,6 +241,10 @@ It's not as good as you think, being a pro trader. Sailing in a sea of unknown f
 
 ---
 
+Sep 15:
+
+---
+
 
 
 Take a look at our midway, around Day 3~4, project structure.
