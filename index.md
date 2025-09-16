@@ -247,6 +247,8 @@ Chinese economic trend as a whole is not as promising, but the main reason is it
 
 company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. crispre came, then transfer this into protein, found that it might work, then tried for almost 10 years, RD. without any products. recently finally done, but still haven't profited yet.
 
+Resource aggregation is the most important quality. aggregate functions, talents, money...
+
 Profit, can wait. But idea, the pipeline, has to be thought out carefully. Time is a really big factor and risk. 
 
 Best case scenario when you have 
