@@ -267,7 +267,7 @@ biotech stuff:
 
 alphafold didn't solve the entire omic problem. Only the main chain is predicted, side chain can take many forms, still no conclusions.
 
-
+Angel investors should at least consider millions, not a few hundred thousands. The quantity speaks its sincerity. The start up env in china isn't as good as the silicon valley.
 
 ---
 
