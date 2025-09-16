@@ -245,17 +245,19 @@ Sep 15: the biggest day of investment and startup and biotech giants: AI for sci
 
 Chinese economic trend as a whole is not as promising, but the main reason is its heavy industries are declining, exports shrinking, and the best alternative is on its way. The stale money flow incentivise more tech-savvy start ups, not less. 
 
-company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. crispre came, then transfer this into protein, found that it might work, then tried for almost 10 years, RD. without any products. recently finally done, but still haven't profited yet.
+Angel investors should at least consider millions, not a few hundred thousands. The quantity speaks its sincerity. The start up env in china isn't as good as the silicon valley.
 
 Resource aggregation is the most important quality. aggregate functions, talents, money...
 
 Profit, can wait. But idea, the pipeline, has to be thought out carefully. Time is a really big factor and risk. 
 
-Best case scenario when you have 
+Best case scenario when you have both leadership and tech knowledge. 
 
-
+He was 
 
 biotech stuff: 
+
+company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. crispre came, then transfer this into protein, found that it might work, then tried for almost 10 years, RD. without any products. recently finally done, but still haven't profited yet.
 
 1. The problem of predicting/identifying/classifying the DNA sequence that will produce the same protein, but with very different speed / volumn, isn't solved, not even close. There is not enough data. Expensive. Should be algorithmic-dependent, not data dependent.
 
@@ -269,7 +271,7 @@ biotech stuff:
 
 alphafold didn't solve the entire omic problem. Only the main chain is predicted, side chain can take many forms, still no conclusions.
 
-Angel investors should at least consider millions, not a few hundred thousands. The quantity speaks its sincerity. The start up env in china isn't as good as the silicon valley.
+
 
 ---
 
