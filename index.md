@@ -267,7 +267,7 @@ biotech stuff:
 
 company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. crispre came, then transfer this into protein, found that it might work, then tried for almost 10 years, RD. without any products. recently finally done, but still haven't profited yet.
 
-1. The problem of predicting/identifying/classifying the DNA sequence that will produce the same protein, but with very different speed / volumn, isn't solved, not even close. There is not enough data. Expensive. Should be algorithmic-dependent, not data dependent.
+1. The problem of predicting/identifying/classifying the DNA sequence that will produce the same protein, but with very different expression speed / volumn, isn't solved, not even close. There is not enough data. Expensive. Should be algorithmic-dependent, not data dependent.
 
 2. The predictions using co-variance of two sites, by acknowledging their high-than-usual coordinates or spacing relationships, accross species with proteins of the same function, is widely applied for alphafold predictions
 
@@ -276,6 +276,8 @@ company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. cr
 4. data driven, and AI for science.
 
 5. microscopic things, ultimate reason for difficulties in researching.
+
+6. high-throughput devised
 
    
 
