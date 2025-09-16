@@ -241,7 +241,7 @@ It's not as good as you think, being a pro trader. Sailing in a sea of unknown f
 
 ---
 
-Sep 15: the biggest day of investment and startup and biotech giants
+Sep 15: the biggest day of investment and startup and biotech giants: AI for science, still the very trendy thing.
 
 Chinese economic trend as a whole is not as promising, but the main reason is its heavy industries are declining, exports shrinking, and the best alternative is on its way. The stale money flow incentivise more tech-savvy start ups, not less. 
 
