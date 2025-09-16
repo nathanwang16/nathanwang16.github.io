@@ -22,6 +22,14 @@ Thank you, MBD.
 
 ---
 
+Observations of various, maybe different, complex systems
+
+The expression level of a protein
+
+
+
+---
+
 
 
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
@@ -266,6 +274,8 @@ company XXXXXX is founded upon the best bio tech of this world, D2P, from SD. cr
 3. Biotech, or comp bio, could perhaps, be analysed or viewed as the extension of some more general science principles... Categories are the same, morphisms exists accross fields.
 
 4. data driven, and AI for science.
+
+5. microscopic things, ultimate reason for difficulties in researching.
 
    
 
