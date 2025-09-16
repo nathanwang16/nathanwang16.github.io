@@ -257,6 +257,8 @@ Angel investors should at least consider millions, not a few hundred thousands. 
 
 Resource aggregation is the most important quality. aggregate functions, talents, money...
 
+The college graduates in china is barely active enough to push new. 
+
 Profit, can wait. But idea, the pipeline, has to be thought out carefully. Time is a really big factor and risk. 
 
 Best case scenario when you have both leadership and tech knowledge. 
