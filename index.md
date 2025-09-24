@@ -34,6 +34,10 @@ The expression level of a protein
 
 The good reason why the study of Mechanistic Interpretation, as in AI alignment, is that it provide a fast feedback loop and demonstrate core research mindset.
 
+___
+
+
+
 Recently interested in ML Alignment, more narrowly machanistic interpretability.
 
 You are welcome to join me. Email: nathan16@g.ucla.edu
