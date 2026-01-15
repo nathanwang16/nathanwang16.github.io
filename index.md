@@ -148,7 +148,7 @@ Claude sonnet: actually write most of the code
 
 ​      },
 
-![confusion_matrix](file:///Users/xiaoyuwang/Desktop/manifold-dim-reduct/phase6_clean_mi_hiearchy_result/figures/confusion_matrix.png)
+![confusion_matrix](images/confusion_matrix.png)
 
 ![pca_family](file:///Users/xiaoyuwang/Desktop/manifold-dim-reduct/phase6_clean_mi_hiearchy_result/figures/pca_family.png)
 
