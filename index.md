@@ -47,7 +47,7 @@ Claude sonnet: actually write most of the code
 - no 18 clean clusters; continuous landscape with gradients
 - Key axis: GC-content gradient (promoter-like vs heterochromatin-like), yet still minority contribution
 
-![pca_2d](file:///Users/xiaoyuwang/Desktop/manifold-dim-reduct/phase2_results/figures/pca_2d.png)
+![pca_2d](images/pca_2d.png)
 
 ![umap_n15_d0.1_2d](file:///Users/xiaoyuwang/Desktop/manifold-dim-reduct/phase2_results/figures/umap_n15_d0.1_2d.png)
 
