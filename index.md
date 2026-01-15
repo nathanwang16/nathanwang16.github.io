@@ -215,6 +215,8 @@ Result
 
 ![label_centroids](images/label_centroids.png)
 
+
+
 Conclusion:
 
 Model's poor performance distracts meaning for much mechanistic interpretability research. Yet steering, patching and dimensional reduction gives quantitative insights on expected range of performance for any models on the task
