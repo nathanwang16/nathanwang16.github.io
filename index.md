@@ -49,7 +49,7 @@ Claude sonnet: actually write most of the code
 
 ![pca_2d](images/pca_2d.png)
 
-![umap_n15_d0.1_2d](file:///Users/xiaoyuwang/Desktop/manifold-dim-reduct/phase2_results/figures/umap_n15_d0.1_2d.png)
+![umap_n15_d0.1_2d](images/umap_n15_d0.1_2d.png)
 
 
 
