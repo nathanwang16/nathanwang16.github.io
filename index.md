@@ -213,7 +213,7 @@ Result
 
   "18": {"family": "background_repressed", "subcluster": 1, "name_hint": "background_sub1"}
 
-
+![label_centroids](images/label_centroids.png)
 
 Conclusion:
 
