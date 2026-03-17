@@ -22,6 +22,12 @@ IGNORED_DIRS = {
     ".cursor",
     ".out-of-code-insights",
 }
+# Content folders to exclude entirely from website navigation/content.
+EXCLUDED_CONTENT_DIRS = {
+    "images",
+    "scripts",
+    "assets",
+}
 
 
 def display_name(path: Path) -> str:
@@ -50,6 +56,13 @@ def extract_title(file_path: Path) -> str:
     return display_name(file_path)
 
 
+def directory_label(directory: str) -> str:
+    """Display label for a directory in top navigation."""
+    if directory == "root":
+        return "Root"
+    return Path(directory).name
+
+
 def collect_markdown_files(root: Path) -> list[dict[str, str]]:
     """Collect markdown file metadata, skipping README and ignored paths."""
     records: list[dict[str, str]] = []
@@ -58,7 +71,10 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
         relative = file_path.relative_to(root)
         parts = relative.parts
 
-        if any(part in IGNORED_DIRS or part.startswith(".") for part in parts[:-1]):
+        parent_parts = parts[:-1]
+        if any(part in IGNORED_DIRS or part.startswith(".") for part in parent_parts):
+            continue
+        if any(part.lower() in EXCLUDED_CONTENT_DIRS for part in parent_parts):
             continue
         if relative.name.lower() == "readme.md":
             continue
@@ -67,16 +83,23 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
 
         group = relative.parent.as_posix()
         directory = "root" if group == "." else group
+        is_directory_index = relative.stem.lower() == "directory"
+        doc_title = directory_label(directory) if is_directory_index else extract_title(file_path)
         records.append(
             {
-                "title": extract_title(file_path),
+                "title": doc_title,
                 "path": relative.as_posix(),
                 "directory": directory,
-                "anchor": "doc-" + relative.as_posix().replace("/", "-").replace(".", "-"),
+                "nav_label": directory_label(directory),
+                "nav_key": directory,
+                "is_directory_index": "true" if is_directory_index else "false",
             }
         )
 
-    return records
+    return sorted(
+        records,
+        key=lambda r: (r["directory"] != "root", r["directory"].lower(), r["path"].lower()),
+    )
 
 
 def build_content(records: list[dict[str, str]]) -> str:
@@ -209,9 +232,20 @@ def build_content(records: list[dict[str, str]]) -> str:
       return decodeURIComponent((hash || "").replace(/^#/, ""));
     }}
 
+    const navMap = new Map();
+    for (const doc of docs) {{
+      const existing = navMap.get(doc.nav_key);
+      if (!existing || doc.is_directory_index === "true") {{
+        navMap.set(doc.nav_key, doc);
+      }}
+    }}
+    const navDocs = Array.from(navMap.values());
+
     function setActive(path) {{
+      const current = docs.find((item) => item.path === path);
+      const activeKey = current ? current.nav_key : "";
       for (const link of topnav.querySelectorAll("a")) {{
-        link.classList.toggle("active", link.dataset.path === path);
+        link.classList.toggle("active", link.dataset.navKey === activeKey);
       }}
     }}
 
@@ -249,8 +283,8 @@ def build_content(records: list[dict[str, str]]) -> str:
         return;
       }}
 
-      topnav.innerHTML = docs.map((doc) =>
-        `<a href="#${{encodeURIComponent(doc.path)}}" data-path="${{doc.path}}">${{doc.title}}</a>`
+      topnav.innerHTML = navDocs.map((doc) =>
+        `<a href="#${{encodeURIComponent(doc.path)}}" data-path="${{doc.path}}" data-nav-key="${{doc.nav_key}}">${{doc.nav_label}}</a>`
       ).join("");
 
       const requested = normalizeHash(window.location.hash);
