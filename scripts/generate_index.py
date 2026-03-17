@@ -94,7 +94,7 @@ def build_content(records: list[dict[str, str]]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nathan Wang</title>
+  <title>Nathan on the streets</title>
   <style>
     :root {{
       --text: #111111;
@@ -191,7 +191,7 @@ def build_content(records: list[dict[str, str]]) -> str:
 <body>
   <div class="wrap">
     <h1>Nathan Wang</h1>
-    <p class="subtitle">Simple notes and writing.</p>
+
     <nav id="topnav" class="topnav"></nav>
     <h2 id="doc-title" class="doc-title">{initial_title}</h2>
     <p id="doc-path" class="doc-path"></p>
