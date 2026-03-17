@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -109,11 +110,26 @@ def build_content(grouped: dict[str, list[Path]]) -> str:
     return "\n".join(lines)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Generate index.md from markdown files in this repository."
+    )
+    parser.add_argument(
+        "--quiet",
+        action="store_true",
+        help="Suppress non-error output.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
     grouped = collect_markdown_files(REPO_ROOT)
     content = build_content(grouped)
     OUTPUT_FILE.write_text(content, encoding="utf-8")
-    print(f"Updated {OUTPUT_FILE.name} with {sum(len(v) for v in grouped.values())} entries.")
+    if not args.quiet:
+        total = sum(len(v) for v in grouped.values())
+        print(f"Updated {OUTPUT_FILE.name} with {total} entries.")
 
 
 if __name__ == "__main__":

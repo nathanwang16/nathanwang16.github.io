@@ -25,6 +25,7 @@ Minimal personal website powered by markdown files.
   - Watches your repo for changes.
   - Regenerates `index.md`.
   - Auto-commits and pushes updates.
+  - Runs silently (no desktop debug log files).
 
 ## Your ideal workflow (now supported)
 
@@ -46,6 +47,35 @@ Run:
 ```bash
 ./AutoPushBlog.sh
 ```
+
+## macOS daemon (LaunchAgent)
+
+You currently have a LaunchAgent installed:
+
+- Label: `com.nathanweb.blogwatcher`
+- Script: `AutoPushBlog.sh`
+- Plist: `/Users/xiaoyuwang/Library/LaunchAgents/com.nathanweb.blogwatcher.plist`
+
+Useful commands:
+
+```bash
+# Check status/details
+launchctl print gui/$(id -u)/com.nathanweb.blogwatcher
+
+# Stop for this login session
+launchctl bootout gui/$(id -u) /Users/xiaoyuwang/Library/LaunchAgents/com.nathanweb.blogwatcher.plist
+
+# Start/reload after changes
+launchctl bootstrap gui/$(id -u) /Users/xiaoyuwang/Library/LaunchAgents/com.nathanweb.blogwatcher.plist
+launchctl kickstart -k gui/$(id -u)/com.nathanweb.blogwatcher
+```
+
+What it does:
+
+- Watches this repo for content changes.
+- Rebuilds `index.md` quietly.
+- If git detects real changes, commits and pushes automatically.
+- If there are no changes, it does nothing.
 
 ## Optional manual regenerate
 
