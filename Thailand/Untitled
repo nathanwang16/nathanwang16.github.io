@@ -1,3 +1,0 @@
-### Thailand ###
-
-Stay tuned!
