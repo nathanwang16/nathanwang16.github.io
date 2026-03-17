@@ -1,33 +1,32 @@
-# Nathan's Notes
+# Nathan Wang
 
-<div style="max-width: 920px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.65;">
+<div style="max-width: 760px; margin: 0 auto; font-family: Georgia, 'Times New Roman', serif; line-height: 1.65; color: #111;">
 
-<p style="font-size: 1.05rem; color: #444; margin-top: 0;">Simple writing space. All markdown files are discovered automatically.</p>
+<p style="margin-top: 0; color: #333;">Simple notes and writing.</p>
 
-## Navigator
+<p><a href="#doc-Journaling-thinking-md" style="text-decoration: none; color: #111;">2026 BioHack Writeup</a> | <a href="#doc-projects-md" style="text-decoration: none; color: #111;">Projects</a> | <a href="#doc-Thailand-MBD-md" style="text-decoration: none; color: #111;">Thailand</a></p>
 
-<div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px;">
-<a href="#section-root" style="text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;">root</a>
-<a href="#section-Journaling" style="text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;">Journaling</a>
-<a href="#section-Thailand" style="text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;">Thailand</a>
+<hr style="border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 22px;">
+
+## Writing
+
+<div id="doc-Journaling-thinking-md" style="margin-bottom: 14px;">
+<a href="Journaling/thinking.md" style="text-decoration: none; color: #111; font-size: 1.06rem;"><strong>2026 BioHack Writeup</strong></a><br>
+<span style="color: #666; font-size: 0.92rem;">Journaling</span>
 </div>
 
-## Library
+<div id="doc-projects-md" style="margin-bottom: 14px;">
+<a href="projects.md" style="text-decoration: none; color: #111; font-size: 1.06rem;"><strong>Projects</strong></a><br>
+<span style="color: #666; font-size: 0.92rem;">root</span>
+</div>
 
-<h3 id="section-root" style="margin-bottom: 8px;">root</h3>
+<div id="doc-Thailand-MBD-md" style="margin-bottom: 14px;">
+<a href="Thailand/MBD.md" style="text-decoration: none; color: #111; font-size: 1.06rem;"><strong>Thailand</strong></a><br>
+<span style="color: #666; font-size: 0.92rem;">Thailand</span>
+</div>
 
-- [Projects](projects.md)
+<hr style="border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 12px;">
 
-<h3 id="section-Journaling" style="margin-bottom: 8px;">Journaling</h3>
-
-- [Thinking](Journaling/thinking.md)
-
-<h3 id="section-Thailand" style="margin-bottom: 8px;">Thailand</h3>
-
-- [Mbd](Thailand/MBD.md)
-
----
-
-_Auto-generated at 2026-03-17 03:53 UTC_
+<p style="color: #777; font-size: 0.9rem; margin-bottom: 0;">Auto-generated at 2026-03-17 03:53 UTC</p>
 
 </div>

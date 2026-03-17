@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -35,9 +36,29 @@ def markdown_link(path: Path) -> str:
     return quote(path.as_posix(), safe="/-_.~")
 
 
-def collect_markdown_files(root: Path) -> dict[str, list[Path]]:
-    """Group markdown files by directory, skipping README and ignored paths."""
-    grouped: dict[str, list[Path]] = {}
+def extract_title(file_path: Path) -> str:
+    """Use the first markdown heading as title fallback to filename."""
+    heading_pattern = re.compile(r"^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$")
+    try:
+        text = file_path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        text = file_path.read_text(encoding="utf-8", errors="ignore")
+
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        match = heading_pattern.match(stripped)
+        if match:
+            title = match.group(1).strip()
+            return title if title else display_name(file_path)
+
+    return display_name(file_path)
+
+
+def collect_markdown_files(root: Path) -> list[dict[str, str]]:
+    """Collect markdown file metadata, skipping README and ignored paths."""
+    records: list[dict[str, str]] = []
 
     for file_path in sorted(root.rglob("*.md"), key=lambda p: p.as_posix().lower()):
         relative = file_path.relative_to(root)
@@ -51,59 +72,55 @@ def collect_markdown_files(root: Path) -> dict[str, list[Path]]:
             continue
 
         group = relative.parent.as_posix()
-        if group == ".":
-            group = "root"
-        grouped.setdefault(group, []).append(relative)
-
-    return grouped
-
-
-def build_content(grouped: dict[str, list[Path]]) -> str:
-    """Build the final markdown with inline HTML styling."""
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    groups = sorted(grouped.keys(), key=lambda g: (g != "root", g.lower()))
-
-    lines: list[str] = []
-    lines.append("# Nathan's Notes")
-    lines.append("")
-    lines.append(
-        "<div style=\"max-width: 920px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.65;\">"
-    )
-    lines.append("")
-    lines.append(
-        "<p style=\"font-size: 1.05rem; color: #444; margin-top: 0;\">Simple writing space. All markdown files are discovered automatically.</p>"
-    )
-    lines.append("")
-    lines.append("## Navigator")
-    lines.append("")
-    lines.append(
-        "<div style=\"display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px;\">"
-    )
-
-    for group in groups:
-        label = "root" if group == "root" else group
-        anchor = f"section-{group.replace('/', '-')}"
-        lines.append(
-            f"<a href=\"#{anchor}\" style=\"text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;\">{label}</a>"
+        directory = "root" if group == "." else group
+        records.append(
+            {
+                "title": extract_title(file_path),
+                "path": relative.as_posix(),
+                "directory": directory,
+                "anchor": "doc-" + relative.as_posix().replace("/", "-").replace(".", "-"),
+            }
         )
 
-    lines.append("</div>")
-    lines.append("")
-    lines.append("## Library")
-    lines.append("")
+    return records
 
-    for group in groups:
-        anchor = f"section-{group.replace('/', '-')}"
-        title = "root" if group == "root" else group
-        lines.append(f"<h3 id=\"{anchor}\" style=\"margin-bottom: 8px;\">{title}</h3>")
-        lines.append("")
-        for file_path in grouped[group]:
-            lines.append(f"- [{display_name(file_path)}]({markdown_link(file_path)})")
-        lines.append("")
 
-    lines.append("---")
+def build_content(records: list[dict[str, str]]) -> str:
+    """Build a clean, text-first page inspired by Soumith-style simplicity."""
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    lines: list[str] = []
+    lines.append("# Nathan Wang")
     lines.append("")
-    lines.append(f"_Auto-generated at {now}_")
+    lines.append("<div style=\"max-width: 760px; margin: 0 auto; font-family: Georgia, 'Times New Roman', serif; line-height: 1.65; color: #111;\">")
+    lines.append("")
+    lines.append("<p style=\"margin-top: 0; color: #333;\">Simple notes and writing.</p>")
+    lines.append("")
+    if records:
+        nav_links: list[str] = []
+        for record in records:
+            nav_links.append(
+                f"<a href=\"#{record['anchor']}\" style=\"text-decoration: none; color: #111;\">{record['title']}</a>"
+            )
+        lines.append("<p>" + " | ".join(nav_links) + "</p>")
+    else:
+        lines.append("<p><em>No markdown documents found yet.</em></p>")
+    lines.append("")
+    lines.append("<hr style=\"border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 22px;\">")
+    lines.append("")
+    lines.append("## Writing")
+    lines.append("")
+    for record in records:
+        lines.append(f"<div id=\"{record['anchor']}\" style=\"margin-bottom: 14px;\">")
+        lines.append(f"<a href=\"{markdown_link(Path(record['path']))}\" style=\"text-decoration: none; color: #111; font-size: 1.06rem;\"><strong>{record['title']}</strong></a><br>")
+        lines.append(
+            f"<span style=\"color: #666; font-size: 0.92rem;\">{record['directory']}</span>"
+        )
+        lines.append("</div>")
+        lines.append("")
+    lines.append("<hr style=\"border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 12px;\">")
+    lines.append("")
+    lines.append(f"<p style=\"color: #777; font-size: 0.9rem; margin-bottom: 0;\">Auto-generated at {now}</p>")
     lines.append("")
     lines.append("</div>")
     lines.append("")
@@ -124,11 +141,11 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    grouped = collect_markdown_files(REPO_ROOT)
-    content = build_content(grouped)
+    records = collect_markdown_files(REPO_ROOT)
+    content = build_content(records)
     OUTPUT_FILE.write_text(content, encoding="utf-8")
     if not args.quiet:
-        total = sum(len(v) for v in grouped.values())
+        total = len(records)
         print(f"Updated {OUTPUT_FILE.name} with {total} entries.")
 
 
