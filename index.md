@@ -8,6 +8,7 @@
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px;">
 <a href="#section-root" style="text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;">root</a>
+<a href="#section-Thailand" style="text-decoration: none; padding: 6px 12px; border: 1px solid #ddd; border-radius: 999px; color: #222; font-size: 0.92rem;">Thailand</a>
 </div>
 
 ## Library
@@ -16,6 +17,10 @@
 
 - [Projects](projects.md)
 - [Thailand](Thailand.md)
+
+<h3 id="section-Thailand" style="margin-bottom: 8px;">Thailand</h3>
+
+- [Mbd](Thailand/MBD.md)
 
 ---
 
