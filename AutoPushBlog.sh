@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # NathanWeb hourly auto-publisher (single run):
-# 1) Rebuilds index.md quietly
+# 1) Rebuilds index.html quietly
 # 2) If git detects any repo changes, commits and pushes
 # 3) Exits immediately (launchd StartInterval runs it every hour)
 

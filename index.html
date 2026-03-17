@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nathan Wang</title>
+  <style>
+    :root {
+      --text: #111111;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #ffffff;
+      --link: #0f172a;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 34px auto 64px;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 8px 0 18px;
+      color: #374151;
+      font-size: 19px;
+    }
+    .topnav {
+      margin: 0 0 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .topnav a {
+      color: var(--link);
+      text-decoration: none;
+      margin-right: 14px;
+      font-size: 19px;
+    }
+    .topnav a.active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .doc-title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .doc-path {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    article {
+      font-size: 20px;
+    }
+    article h1, article h2, article h3, article h4 {
+      line-height: 1.25;
+      margin-top: 1.2em;
+      margin-bottom: 0.45em;
+    }
+    article p, article ul, article ol, article blockquote {
+      margin: 0 0 0.9em;
+    }
+    article img {
+      max-width: 100%;
+      height: auto;
+    }
+    article pre {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    article code {
+      font-size: 0.9em;
+    }
+    .empty {
+      color: var(--muted);
+      font-style: italic;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Nathan Wang</h1>
+    <p class="subtitle">Simple notes and writing.</p>
+    <nav id="topnav" class="topnav"></nav>
+    <h2 id="doc-title" class="doc-title">2026 BioHack Writeup</h2>
+    <p id="doc-path" class="doc-path"></p>
+    <article id="content"></article>
+  </div>
+
+  <script>
+    const docs = [{"title": "2026 BioHack Writeup", "path": "Journaling/thinking.md", "directory": "Journaling", "anchor": "doc-Journaling-thinking-md"}, {"title": "Projects", "path": "projects.md", "directory": "root", "anchor": "doc-projects-md"}, {"title": "Thailand", "path": "Thailand/MBD.md", "directory": "Thailand", "anchor": "doc-Thailand-MBD-md"}];
+    const topnav = document.getElementById("topnav");
+    const content = document.getElementById("content");
+    const docTitle = document.getElementById("doc-title");
+    const docPath = document.getElementById("doc-path");
+
+    function normalizeHash(hash) {
+      return decodeURIComponent((hash || "").replace(/^#/, ""));
+    }
+
+    function setActive(path) {
+      for (const link of topnav.querySelectorAll("a")) {
+        link.classList.toggle("active", link.dataset.path === path);
+      }
+    }
+
+    async function renderDoc(path) {
+      const doc = docs.find((item) => item.path === path);
+      if (!doc) {
+        content.innerHTML = '<p class="empty">Document not found.</p>';
+        docTitle.textContent = "Document not found";
+        docPath.textContent = "";
+        return;
+      }
+
+      docTitle.textContent = doc.title;
+      docPath.textContent = doc.directory === "root" ? "root" : doc.directory;
+      setActive(path);
+
+      try {
+        const response = await fetch(encodeURI(doc.path));
+        if (!response.ok) {
+          throw new Error("Unable to load markdown file.");
+        }
+        const md = await response.text();
+        content.innerHTML = marked.parse(md);
+      } catch (_error) {
+        content.innerHTML = '<p class="empty">Failed to load markdown content.</p>';
+      }
+    }
+
+    function initNav() {
+      if (!docs.length) {
+        topnav.innerHTML = '<span class="empty">No markdown documents found.</span>';
+        content.innerHTML = '<p class="empty">Add markdown files to this repository.</p>';
+        docTitle.textContent = "No content";
+        docPath.textContent = "";
+        return;
+      }
+
+      topnav.innerHTML = docs.map((doc) =>
+        `<a href="#${encodeURIComponent(doc.path)}" data-path="${doc.path}">${doc.title}</a>`
+      ).join("");
+
+      const requested = normalizeHash(window.location.hash);
+      const initial = docs.some((d) => d.path === requested) ? requested : docs[0].path;
+      if (window.location.hash !== `#${encodeURIComponent(initial)}`) {
+        history.replaceState(null, "", `#${encodeURIComponent(initial)}`);
+      }
+      renderDoc(initial);
+    }
+
+    window.addEventListener("hashchange", () => {
+      const requested = normalizeHash(window.location.hash);
+      if (requested) {
+        renderDoc(requested);
+      }
+    });
+
+    initNav();
+  </script>
+</body>
+</html>

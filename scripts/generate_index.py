@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""Generate a styled index.md from markdown files in the repo."""
+"""Generate index.html from markdown files in the repository."""
 
 from __future__ import annotations
 
 import argparse
+import json
 import re
-from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import quote
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-OUTPUT_FILE = REPO_ROOT / "index.md"
+OUTPUT_FILE = REPO_ROOT / "index.html"
 
-IGNORED_FILES = {"index.md"}
+IGNORED_FILES = {"index.md", "index.html"}
 IGNORED_DIRS = {
     ".git",
     ".github",
@@ -29,11 +28,6 @@ def display_name(path: Path) -> str:
     """Humanize file names while preserving concise structure."""
     name = path.stem.replace("-", " ").replace("_", " ").strip()
     return name.title() if name else path.stem
-
-
-def markdown_link(path: Path) -> str:
-    """Create a URL-safe markdown link for GitHub Pages."""
-    return quote(path.as_posix(), safe="/-_.~")
 
 
 def extract_title(file_path: Path) -> str:
@@ -86,50 +80,204 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
 
 
 def build_content(records: list[dict[str, str]]) -> str:
-    """Build a clean, text-first page inspired by Soumith-style simplicity."""
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-
-    lines: list[str] = []
-    lines.append("# Nathan Wang")
-    lines.append("")
-    lines.append("<div style=\"max-width: 760px; margin: 0 auto; font-family: Georgia, 'Times New Roman', serif; line-height: 1.65; color: #111;\">")
-    lines.append("")
-    lines.append("<p style=\"margin-top: 0; color: #333;\">Simple notes and writing.</p>")
-    lines.append("")
+    """Build an HTML shell and render markdown content client-side."""
     if records:
-        nav_links: list[str] = []
-        for record in records:
-            nav_links.append(
-                f"<a href=\"#{record['anchor']}\" style=\"text-decoration: none; color: #111;\">{record['title']}</a>"
-            )
-        lines.append("<p>" + " | ".join(nav_links) + "</p>")
+        initial_path = records[0]["path"]
+        initial_title = records[0]["title"]
     else:
-        lines.append("<p><em>No markdown documents found yet.</em></p>")
-    lines.append("")
-    lines.append("<hr style=\"border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 22px;\">")
-    lines.append("")
-    lines.append("## Writing")
-    lines.append("")
-    for record in records:
-        lines.append(f"<div id=\"{record['anchor']}\" style=\"margin-bottom: 14px;\">")
-        lines.append(f"<a href=\"{markdown_link(Path(record['path']))}\" style=\"text-decoration: none; color: #111; font-size: 1.06rem;\"><strong>{record['title']}</strong></a><br>")
-        lines.append(
-            f"<span style=\"color: #666; font-size: 0.92rem;\">{record['directory']}</span>"
-        )
-        lines.append("</div>")
-        lines.append("")
-    lines.append("<hr style=\"border: 0; border-top: 1px solid #e5e5e5; margin: 18px 0 12px;\">")
-    lines.append("")
-    lines.append(f"<p style=\"color: #777; font-size: 0.9rem; margin-bottom: 0;\">Auto-generated at {now}</p>")
-    lines.append("")
-    lines.append("</div>")
-    lines.append("")
-    return "\n".join(lines)
+        initial_path = ""
+        initial_title = "No content"
+
+    records_json = json.dumps(records, ensure_ascii=False)
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nathan Wang</title>
+  <style>
+    :root {{
+      --text: #111111;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #ffffff;
+      --link: #0f172a;
+    }}
+    html, body {{
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }}
+    .wrap {{
+      max-width: 760px;
+      margin: 34px auto 64px;
+      padding: 0 20px;
+    }}
+    h1 {{
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }}
+    .subtitle {{
+      margin: 8px 0 18px;
+      color: #374151;
+      font-size: 19px;
+    }}
+    .topnav {{
+      margin: 0 0 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }}
+    .topnav a {{
+      color: var(--link);
+      text-decoration: none;
+      margin-right: 14px;
+      font-size: 19px;
+    }}
+    .topnav a.active {{
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }}
+    .doc-title {{
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }}
+    .doc-path {{
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+    }}
+    article {{
+      font-size: 20px;
+    }}
+    article h1, article h2, article h3, article h4 {{
+      line-height: 1.25;
+      margin-top: 1.2em;
+      margin-bottom: 0.45em;
+    }}
+    article p, article ul, article ol, article blockquote {{
+      margin: 0 0 0.9em;
+    }}
+    article img {{
+      max-width: 100%;
+      height: auto;
+    }}
+    article pre {{
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+    }}
+    article code {{
+      font-size: 0.9em;
+    }}
+    .empty {{
+      color: var(--muted);
+      font-style: italic;
+    }}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Nathan Wang</h1>
+    <p class="subtitle">Simple notes and writing.</p>
+    <nav id="topnav" class="topnav"></nav>
+    <h2 id="doc-title" class="doc-title">{initial_title}</h2>
+    <p id="doc-path" class="doc-path"></p>
+    <article id="content"></article>
+  </div>
+
+  <script>
+    const docs = {records_json};
+    const topnav = document.getElementById("topnav");
+    const content = document.getElementById("content");
+    const docTitle = document.getElementById("doc-title");
+    const docPath = document.getElementById("doc-path");
+
+    function normalizeHash(hash) {{
+      return decodeURIComponent((hash || "").replace(/^#/, ""));
+    }}
+
+    function setActive(path) {{
+      for (const link of topnav.querySelectorAll("a")) {{
+        link.classList.toggle("active", link.dataset.path === path);
+      }}
+    }}
+
+    async function renderDoc(path) {{
+      const doc = docs.find((item) => item.path === path);
+      if (!doc) {{
+        content.innerHTML = '<p class="empty">Document not found.</p>';
+        docTitle.textContent = "Document not found";
+        docPath.textContent = "";
+        return;
+      }}
+
+      docTitle.textContent = doc.title;
+      docPath.textContent = doc.directory === "root" ? "root" : doc.directory;
+      setActive(path);
+
+      try {{
+        const response = await fetch(encodeURI(doc.path));
+        if (!response.ok) {{
+          throw new Error("Unable to load markdown file.");
+        }}
+        const md = await response.text();
+        content.innerHTML = marked.parse(md);
+      }} catch (_error) {{
+        content.innerHTML = '<p class="empty">Failed to load markdown content.</p>';
+      }}
+    }}
+
+    function initNav() {{
+      if (!docs.length) {{
+        topnav.innerHTML = '<span class="empty">No markdown documents found.</span>';
+        content.innerHTML = '<p class="empty">Add markdown files to this repository.</p>';
+        docTitle.textContent = "No content";
+        docPath.textContent = "";
+        return;
+      }}
+
+      topnav.innerHTML = docs.map((doc) =>
+        `<a href="#${{encodeURIComponent(doc.path)}}" data-path="${{doc.path}}">${{doc.title}}</a>`
+      ).join("");
+
+      const requested = normalizeHash(window.location.hash);
+      const initial = docs.some((d) => d.path === requested) ? requested : docs[0].path;
+      if (window.location.hash !== `#${{encodeURIComponent(initial)}}`) {{
+        history.replaceState(null, "", `#${{encodeURIComponent(initial)}}`);
+      }}
+      renderDoc(initial);
+    }}
+
+    window.addEventListener("hashchange", () => {{
+      const requested = normalizeHash(window.location.hash);
+      if (requested) {{
+        renderDoc(requested);
+      }}
+    }});
+
+    initNav();
+  </script>
+</body>
+</html>
+"""
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate index.md from markdown files in this repository."
+        description="Generate index.html from markdown files in this repository."
     )
     parser.add_argument(
         "--quiet",

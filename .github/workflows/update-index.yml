@@ -1,10 +1,9 @@
-name: Update index.md
+name: Update index.html
 
 on:
   push:
     paths:
       - '**/*.md'
-      - '!index.md'
       - 'scripts/generate_index.py'
 
 jobs:
@@ -19,13 +18,13 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Generate index.md
+      - name: Generate index.html
         run: python3 scripts/generate_index.py
 
       - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add index.md
-          git commit -m "Auto-update index.md" || echo "No changes"
+          git add index.html
+          git commit -m "Auto-update index.html" || echo "No changes"
           git push
