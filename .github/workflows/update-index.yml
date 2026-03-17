@@ -3,8 +3,9 @@ name: Update index.md
 on:
   push:
     paths:
-      - '**.md'
+      - '**/*.md'
       - '!index.md'
+      - 'scripts/generate_index.py'
 
 jobs:
   update-index:
@@ -19,22 +20,7 @@ jobs:
           python-version: '3.x'
 
       - name: Generate index.md
-        run: |
-          python3 <<EOF
-          import os
-
-          index_file = "index.md"
-          ignore_files = {index_file, "README.md"}
-
-          md_files = sorted(f for f in os.listdir('.') if f.endswith('.md') and f not in ignore_files)
-
-          with open(index_file, "w") as f:
-              f.write("# 📝 My Blog\\n\\n")
-              f.write("Welcome to my blog. Select a post below:\\n\\n")
-              for file in md_files:
-                  title = file.replace(".md", "").replace("-", " ").title()
-                  f.write(f"- [{title}]({file})\\n")
-          EOF
+        run: python3 scripts/generate_index.py
 
       - name: Commit and push
         run: |
