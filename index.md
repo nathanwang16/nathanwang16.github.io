@@ -16,7 +16,6 @@
 <h3 id="section-root" style="margin-bottom: 8px;">root</h3>
 
 - [Projects](projects.md)
-- [Thailand](Thailand.md)
 
 <h3 id="section-Thailand" style="margin-bottom: 8px;">Thailand</h3>
 
