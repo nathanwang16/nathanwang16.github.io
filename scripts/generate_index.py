@@ -31,29 +31,8 @@ EXCLUDED_CONTENT_DIRS = {
 
 
 def display_name(path: Path) -> str:
-    """Humanize file names while preserving concise structure."""
-    name = path.stem.replace("-", " ").replace("_", " ").strip()
-    return name.title() if name else path.stem
-
-
-def extract_title(file_path: Path) -> str:
-    """Use the first markdown heading as title fallback to filename."""
-    heading_pattern = re.compile(r"^\s{0,3}#{1,6}\s+(.+?)\s*#*\s*$")
-    try:
-        text = file_path.read_text(encoding="utf-8")
-    except UnicodeDecodeError:
-        text = file_path.read_text(encoding="utf-8", errors="ignore")
-
-    for line in text.splitlines():
-        stripped = line.strip()
-        if not stripped:
-            continue
-        match = heading_pattern.match(stripped)
-        if match:
-            title = match.group(1).strip()
-            return title if title else display_name(file_path)
-
-    return display_name(file_path)
+    """Display file name from filesystem (without extension)."""
+    return path.stem
 
 
 def directory_label(directory: str) -> str:
@@ -84,7 +63,8 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
         group = relative.parent.as_posix()
         directory = "root" if group == "." else group
         is_directory_index = relative.stem.lower() == "directory"
-        doc_title = directory_label(directory) if is_directory_index else extract_title(file_path)
+        file_label = display_name(relative)
+        doc_title = directory_label(directory) if is_directory_index else file_label
         records.append(
             {
                 "title": doc_title,
@@ -93,7 +73,7 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
                 "nav_label": directory_label(directory),
                 "nav_key": directory,
                 "is_directory_index": "true" if is_directory_index else "false",
-                "doc_label": "Overview" if is_directory_index else doc_title,
+                "doc_label": "Overview" if is_directory_index else file_label,
             }
         )
 
