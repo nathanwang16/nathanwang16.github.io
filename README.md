@@ -48,6 +48,31 @@ Run:
 ./AutoPushBlog.sh
 ```
 
+## Fast local preview (recommended while editing)
+
+Run one command to build + serve locally, with automatic `index.html` regeneration
+whenever markdown files change:
+
+```bash
+python3 scripts/local_preview.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+Optional flags:
+
+```bash
+# Use a different port
+python3 scripts/local_preview.py --port 5173
+
+# Expose on your LAN
+python3 scripts/local_preview.py --host 0.0.0.0 --port 5173
+```
+
 ## macOS daemon (LaunchAgent)
 
 You currently have a LaunchAgent installed:
