@@ -29,17 +29,34 @@ EXCLUDED_CONTENT_DIRS = {
     "assets",
 }
 
+# Leading "N." or "N. " on folder or file names sets nav order (N integer); stripped from labels.
+_NAV_RANK_PREFIX = re.compile(r"^(\d+)\.\s*(.+)$")
 
-def display_name(path: Path) -> str:
-    """Display file name from filesystem (without extension)."""
-    return path.stem
+
+def parse_nav_rank_and_label(name: str) -> tuple[int | None, str]:
+    """If name starts with digits, a dot, then a title, return (rank, title); else (None, name)."""
+    m = _NAV_RANK_PREFIX.match(name.strip())
+    if not m:
+        return None, name
+    rest = m.group(2).strip()
+    if not rest:
+        return None, name
+    return int(m.group(1)), rest
+
+
+def rank_sort_key(rank: int | None) -> tuple[int, int]:
+    """Numbered names sort first by rank; unnumbered sort after, stable vs path."""
+    if rank is None:
+        return (1, 0)
+    return (0, rank)
 
 
 def directory_label(directory: str) -> str:
     """Display label for a directory in top navigation."""
     if directory == "root":
         return "Root"
-    return Path(directory).name
+    _, label = parse_nav_rank_and_label(Path(directory).name)
+    return label
 
 
 def collect_markdown_files(root: Path) -> list[dict[str, str]]:
@@ -63,24 +80,45 @@ def collect_markdown_files(root: Path) -> list[dict[str, str]]:
         group = relative.parent.as_posix()
         directory = "root" if group == "." else group
         is_directory_index = relative.stem.lower() == "directory"
-        file_label = display_name(relative)
-        doc_title = directory_label(directory) if is_directory_index else file_label
+
+        if directory == "root":
+            nav_dir_rank = None
+        else:
+            nav_dir_rank, _ = parse_nav_rank_and_label(Path(directory).name)
+        nav_label = directory_label(directory)
+
+        doc_rank, stem_label = parse_nav_rank_and_label(relative.stem)
+        doc_title = nav_label if is_directory_index else stem_label
+        doc_label = "Overview" if is_directory_index else stem_label
+
         records.append(
             {
                 "title": doc_title,
                 "path": relative.as_posix(),
                 "directory": directory,
-                "nav_label": directory_label(directory),
+                "nav_label": nav_label,
                 "nav_key": directory,
                 "is_directory_index": "true" if is_directory_index else "false",
-                "doc_label": "Overview" if is_directory_index else file_label,
+                "doc_label": doc_label,
+                "_nav_dir_rank": nav_dir_rank,
+                "_doc_rank": doc_rank,
             }
         )
 
-    return sorted(
-        records,
-        key=lambda r: (r["directory"] != "root", r["directory"].lower(), r["path"].lower()),
+    records.sort(
+        key=lambda r: (
+            r["directory"] != "root",
+            rank_sort_key(r["_nav_dir_rank"]),
+            r["directory"].lower(),
+            rank_sort_key(r["_doc_rank"]),
+            r["path"].lower(),
+        ),
     )
+    for r in records:
+        del r["_nav_dir_rank"]
+        del r["_doc_rank"]
+
+    return records
 
 
 def build_content(records: list[dict[str, str]]) -> str:
