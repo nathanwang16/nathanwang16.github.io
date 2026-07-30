@@ -1,0 +1,43 @@
+# Our Life is entangled with Information, Truth is scarce, the Internet is Inhumane
+
+*Two instruments, one thesis. One maps what is being said. The other keeps score on who was
+right.*
+
+Most tools for handling information optimize for retrieval: you know what you want, they
+fetch it. That assumes the hard part is access. It isn't, and hasn't been for two decades.
+The hard part is orientation — knowing what the shape of a discourse is before you have read
+any of it, and knowing which voices inside it have historically been worth listening to.
+
+Those are two different measurement problems, so this is two systems.
+
+**Infolake** is the map. It crawls a wide set of independent sources, embeds everything,
+clusters it, and renders the corpus as a navigable hypergraph. You look at the terrain before
+you pick a trail. The bet is that the geometry of a corpus carries information that no
+individual document does — where the dense regions are, what sits between them, and what is
+conspicuously empty.
+
+**Infoledger** is the scorecard. It ingests forward-looking claims that public figures
+already made voluntarily and in public, compiles them into falsifiable propositions, resolves
+them against outcomes when the horizon arrives, and aggregates per-source track records.
+Nobody opts in. Prediction markets require participation and fact-checking arrives after the
+fact; this sits in the gap between them.
+
+The shared substrate is **infocrawl**, a contract-based multi-source acquisition layer, and a
+common hypergraph store. The shared discipline is that both systems are built to be honest
+about their own uncertainty — which, it turns out, is most of the engineering.
+
+---
+
+**Why this stopped being a side project.** It began as a personal instrument: a better way
+for one person to select and absorb information. It kept growing load-bearing parts — a
+crawler fleet, an adapter contract, a taxonomy backbone, an inference layer with real
+statistical commitments — until the honest description was no longer "a project" but a small
+research program with two product-shaped ends. It now runs on its own domain and its own
+infrastructure.
+
+Status: active. Infolake has a working pipeline and UI. Infoledger is at the
+specification-and-validation stage, deliberately: the data-integrity invariants have to be
+right *before* collection starts, because a ledger collected without them cannot be repaired
+afterwards.
+
+Contact: nathan16@ucla.edu · https://github.com/nathanwang16/infolake
